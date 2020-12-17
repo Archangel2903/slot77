@@ -7,8 +7,282 @@
   flex-grow: 1;
   -webkit-flex-grow: 1;
   min-width: 320px;
+  width: 100%;
 }
 
 .main-slider {
 
+}
+
+/* MAIN BANNER */
+.section-banner {
+  height: 475px;
+  padding: 85px 0 40px;
+
+  &> .container {
+    position: relative;
+  }
+}
+
+.banner {
+  &__pic {
+    position: absolute;
+    top: -85px;
+    right: -11%;
+  }
+
+  &__content {
+    max-width: 75%;
+  }
+  &__title {
+    margin: 0 0 16px;
+    color: $main-second-color;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 60px;
+    text-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
+  }
+  &__text {
+    margin: 0 0 30px;
+    color: #ffffff;
+    line-height: 28px;
+
+    a {
+      color: $main-second-color;
+    }
+  }
+  &__btn {
+
+  }
+}
+
+/* TOP SLOTS */
+.section-top-slots {}
+
+.top-slots {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+
+  &__box {
+    max-width: 217px;
+    max-height: 283px;
+    margin: 0 0 45px;
+    text-align: center;
+    @include transition();
+
+    img {
+      width: 100%;
+      height: 153px;
+    }
+  }
+}
+
+/* BEST CASINO */
+.section-best-casino {
+
+}
+
+.best-casino {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  &__box {
+    width: 100%;
+    max-width: 304px;
+    margin: 0 0 45px;
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: 105px;
+    }
+  }
+}
+
+/* FREE SLOTS */
+.free-slots {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+
+  &__box {
+    max-width: 217px;
+    margin: 0 0 45px;
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: 153px;
+    }
+  }
+}
+
+/* BEST SLOTS */
+.best-slots {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  &__box {
+    &.card {
+      text-align: center;
+      &.hidden-btn {
+        max-height: 229px;
+      }
+    }
+
+    img {
+      width: 100%;
+      max-height: 108px;
+    }
+
+    .card-text {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}
+
+/* THEME SLOTS */
+.section-themes {
+
+}
+
+.slot-theme {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  &__box {
+    max-width: 190px;
+    margin: 0 0 30px;
+    text-align: center;
+
+    .card {
+      &-body {
+        padding: 24px 15px 28px;
+      }
+      &-text {
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: normal;
+      }
+    }
+  }
+  &__description {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+
+    &-text {
+      margin: 0;
+      img {
+        float: right;
+      }
+    }
+    &-pic {
+
+    }
+  }
+}
+
+/* FAQ */
+.section-faq {
+  .title {
+    text-transform: uppercase;
+  }
+}
+
+.accordion-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  &__box {
+    width: 100%;
+    margin: 0 0 10px;
+    border: 1px solid rgba(0, 19, 149, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 19, 149, 0.1);
+    padding: 12px 31px 14px;
+
+    &-title {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: center;
+      margin: 0;
+      @include transition();
+      cursor: pointer;
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        margin-top: -5px;
+        margin-left: 14px;
+        border: none;
+        border-right: 1px solid #001395;
+        border-bottom: 1px solid #001395;
+        transform: rotate(45deg) rotate3d(0, 0, 0, 180deg);
+        @include transition();
+      }
+    }
+    &-text {
+      margin: 0;
+    }
+
+    &.active {
+      box-shadow: inset 0 4px 10px rgba(0, 19, 149, 0.1);
+      .accordion-list {
+        &__box {
+          &-title {
+            margin: 0 0 12px;
+            color: $main-second-color;
+            font-weight: 600;
+            &:after {
+              margin-top: 10px;
+              transform: rotate(45deg) rotate3d(-1, 1, 0, 180deg);
+            }
+          }
+          &-text {
+            display: block;
+          }
+        }
+      }
+    }
+    &:hover {
+      .accordion-list {
+        &__box {
+          &-title {
+            color: $main-second-color;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
 }

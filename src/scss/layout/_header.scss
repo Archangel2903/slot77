@@ -9,3 +9,31 @@ header.header {
   width: 100%;
   z-index: 100;
 }
+
+.header {
+  order: 1;
+  -webkit-order: 1;
+  position: relative;
+  min-width: 320px;
+  width: 100%;
+  z-index: 100;
+
+  &__menu {
+    width: 100%;
+    max-width: 900px;
+    &-list {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &-link {
+      text-decoration: none !important;
+      &:hover {
+        color: $main-second-color;
+        font-weight: 700;
+      }
+    }
+  }
+}

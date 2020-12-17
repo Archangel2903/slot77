@@ -19,6 +19,7 @@ html, body {
   text-size-adjust: none;
   font-family: $font-family-base;
   font-size: $font-size-default;
+  line-height: 28px;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
@@ -303,20 +304,25 @@ iframe {
   border: none;
 }
 
+img {
+  object-fit: cover;
+  object-position: center;
+}
+
 ::selection {
   text-shadow: none;
-  color: $text-color;
-  background: $main-first-color;
+  color: $main-first-color;
+  background: $main-second-color;
 }
 
 ::-moz-selection {
   text-shadow: none;
-  color: $text-color;
-  background: $main-first-color;
+  color: $main-first-color;
+  background: $main-second-color;
 }
 
 ::-ms-selection {
   text-shadow: none;
-  color: $text-color;
-  background: $main-first-color;
+  color: $main-first-color;
+  background: $main-second-color;
 }

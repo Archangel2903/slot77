@@ -1,15 +1,15 @@
 // main colors
-$main-first-color: red;
-$main-second-color: green;
+$main-first-color: #001395;
+$main-second-color: #FF5C00;
 $main-third-color: blue;
 
 // colors
-$title-color: #111;
-$text-color: #333;
+$title-color: $main-first-color;
+$text-color: $main-first-color;
 $input-placeholder-color: #aaa;
 
 // fonts
-$font-family-base: 'Verdana', sans-serif;
+$font-family-base: 'NotoSans', sans-serif;
 $font-family-custom: 'Arial', sans-serif;
 $font-family-unique: 'Times New Roman', serif;
 
@@ -18,8 +18,8 @@ $font-weight-medium: 500;
 $font-weight-sbold: 600;
 
 // font-size
-$font-size-default: 16px;
-$line-height-base: 1.25;
+$font-size-default: 18px;
+$line-height-base: 1;
 
 // behavior
 $transition-base: all .3s ease 0s;
@@ -27,3 +27,18 @@ $transition-base: all .3s ease 0s;
 //Bootstrap var
 $enable-shadows: true;
 $body-color: $text-color;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 768px,
+        md: 991px,
+        lg: 1080px,
+        xl: 1280px
+);
+
+$container-max-widths: (
+        sm: 720px,
+        md: 960px,
+        lg: 1080px,
+        xl: 1280px
+);

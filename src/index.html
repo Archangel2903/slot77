@@ -11,21 +11,627 @@
 <div class="main-wrapper">
     <!-- HEADER -->
     <header class="header">
-        <div class="container bg-light">
-            <h1>Header Title</h1>
+        <div class="container d-flex flex-row flex-wrap justify-content-between align-items-center align-content-center pt-4 pb-3">
+            <a href="index.html" class="header__logo">
+                <picture>
+                    <img src="<%= require('./img/logo.svg') %>" alt="main-logo">
+                </picture>
+            </a>
+
+            <div class="header__menu">
+                <button class="header__menu-switch d-lg-none">
+                    <span class="header__menu-switch header__menu-switch_line"></span>
+                </button>
+
+                <nav class="header__menu-list">
+                    <a href="#" class="header__menu-link">Online Casinos</a>
+                    <a href="#" class="header__menu-link">Free Slots</a>
+                    <a href="#" class="header__menu-link">All Providers</a>
+                    <a href="#" class="header__menu-link">Casino Bonuses</a>
+                    <a href="#" class="header__menu-link">Contacts</a>
+                </nav>
+            </div>
         </div>
     </header>
     <!-- HEADER END -->
 
     <!-- CONTENT -->
     <main class="content">
-        <div class="section">
+        <div class="section section-banner">
+            <div class="section-bg">
+                <picture>
+                    <img src="<%= require('./img/banner-bg01.jpg') %>" alt="banner-background">
+                </picture>
+            </div>
+
+            <div class="container">
+                <div class="banner">
+                    <picture class="banner__pic">
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/banner-img-01.png') %>" alt="">
+                    </picture>
+                    <div class="banner__content">
+                        <p class="banner__title">Play free slot games online and get fun bonuses</p>
+                        <p class="banner__text">Casino <a href="index.html">slot77</a> is an online comparison site where new and experienced players can find their next casino. We
+                            aim to make this simple with comprehensive and honest reviews of casinos and bonuses for you to compare. We also encourage players to leave their own
+                            reviews of each casino so you can read first-hand opinions and experiences.</p>
+                        <a href="#" class="banner__btn btn btn-primary btn-lg">Play Free Slots</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section section-top-slots">
+            <div class="container">
+                <h2 class="section-top-slots__title title">Our Top Vegas Online Slots</h2>
+
+                <div class="top-slots">
+                    <div class="top-slots__box card hidden-btn">
+                        <picture class="card-img-top">
+                            <img src="<%= require('./img/slot-01.jpg') %>" alt="top-slot">
+                        </picture>
+
+                        <div class="card-body">
+                            <p class="card-title">Buffalo</p>
+                            <p class="card-text text-subtitle">Aristocrat</p>
+                            <input type="text" class="rating-input rating-read" value="3">
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="top-slots__box card hidden-btn">
+                        <picture class="card-img-top">
+                            <img src="<%= require('./img/slot-02.jpg') %>" alt="top-slot">
+                        </picture>
+
+                        <div class="card-body">
+                            <p class="card-title">Quick Hit</p>
+                            <p class="card-text text-subtitle">bally</p>
+                            <input type="text" class="rating-input rating-read" value="3">
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="top-slots__box card hidden-btn">
+                        <picture class="card-img-top">
+                            <img src="<%= require('./img/slot-03.jpg') %>" alt="top-slot">
+                        </picture>
+
+                        <div class="card-body">
+                            <p class="card-title">50 Lions</p>
+                            <p class="card-text text-subtitle">Aristocrat</p>
+                            <input type="text" class="rating-input rating-read" value="3">
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="top-slots__box card hidden-btn">
+                        <picture class="card-img-top">
+                            <img src="<%= require('./img/slot-04.jpg') %>" alt="top-slot">
+                        </picture>
+
+                        <div class="card-body">
+                            <p class="card-title">Triple Diamond</p>
+                            <p class="card-text text-subtitle">igt</p>
+                            <input type="text" class="rating-input rating-read" value="3">
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="top-slots__box card hidden-btn">
+                        <picture class="card-img-top">
+                            <img src="<%= require('./img/slot-05.jpg') %>" alt="top-slot">
+                        </picture>
+
+                        <div class="card-body">
+                            <p class="card-title">Golden Goddess</p>
+                            <p class="card-text text-subtitle">Igt</p>
+                            <input type="text" class="rating-input rating-read" value="3">
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section section-best-casino">
+            <div class="container">
+                <h2 class="section-best-casino__title title">Find The Best Casinos For Real Money Slots</h2>
+                <div class="best-casino">
+                    <div class="best-casino__box card">
+                        <picture>
+                            <img src="<%= require('./img/casino-logo01.png') %>" alt="">
+                        </picture>
+
+                        <div class="card-body">
+                            <p class="card-title">Vbet Casino</p>
+                            <input type="text" class="rating-input rating-read" value="4">
+                            <p class="card-text"><b>100%</b> Up To <b>$1100</b></p>
+                            <a href="#" class="card-link btn btn-primary">Play Now</a>
+                        </div>
+                    </div>
+
+                    <div class="best-casino__box card">
+                        <picture>
+                            <img src="<%= require('./img/casino-logo02.png') %>" alt="">
+                        </picture>
+
+                        <div class="card-body">
+                            <p class="card-title">EU Casino</p>
+                            <input type="text" class="rating-input rating-read" value="4">
+                            <p class="card-text"><b>150%</b> Up To <b>$100</b></p>
+                            <a href="#" class="card-link btn btn-primary">Play Now</a>
+                        </div>
+                    </div>
+
+                    <div class="best-casino__box card">
+                        <picture>
+                            <img src="<%= require('./img/casino-logo03.png') %>" alt="">
+                        </picture>
+
+                        <div class="card-body">
+                            <p class="card-title">Slots Magic</p>
+                            <input type="text" class="rating-input rating-read" value="4">
+                            <p class="card-text"><b>120%</b> Up To <b>$200</b></p>
+                            <a href="#" class="card-link btn btn-primary">Play Now</a>
+                        </div>
+                    </div>
+
+                    <div class="best-casino__box card">
+                        <picture>
+                            <img src="<%= require('./img/casino-logo04.png') %>" alt="">
+                        </picture>
+
+                        <div class="card-body">
+                            <p class="card-title">Play Million</p>
+                            <input type="text" class="rating-input rating-read" value="4">
+                            <p class="card-text"><b>100%</b> Up To <b>$100</b></p>
+                            <a href="#" class="card-link btn btn-primary">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <a href="#" class="btn btn-primary btn-lg">see all casinos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section section-free-slots">
+            <div class="container">
+                <h2 class="section-free-slots__title title">Free Slots Online</h2>
+
+                <div class="free-slots">
+                    <div class="free-slots__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/free-slot01.png') %>" alt="free-slots">
+                        </picture>
+
+                        <div class="card-body">
+                            <p class="card-title">Dolphin Gold</p>
+                            <p class="card-text text-subtitle">Aristocrat</p>
+                            <input type="text" class="rating-input rating-read" value="1">
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="free-slots__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/free-slot02.png') %>" alt="free-slots">
+                        </picture>
+
+                        <div class="card-body">
+                            <p class="card-title">Super Dragons Fire</p>
+                            <p class="card-text text-subtitle">Aristocrat</p>
+                            <input type="text" class="rating-input rating-read" value="2">
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="free-slots__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/free-slot03.png') %>" alt="free-slots">
+                        </picture>
+
+                        <div class="card-body">
+                            <p class="card-title">Mermaid Gold</p>
+                            <p class="card-text text-subtitle">Aristocrat</p>
+                            <input type="text" class="rating-input rating-read" value="3">
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="free-slots__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/free-slot04.png') %>" alt="free-slots">
+                        </picture>
+
+                        <div class="card-body">
+                            <p class="card-title">Panda MEME</p>
+                            <p class="card-text text-subtitle">Aristocrat</p>
+                            <input type="text" class="rating-input rating-read" value="4">
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="free-slots__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/free-slot05.png') %>" alt="free-slots">
+                        </picture>
+
+                        <div class="card-body">
+                            <p class="card-title">Zeus The Thunder II</p>
+                            <p class="card-text text-subtitle">Aristocrat</p>
+                            <input type="text" class="rating-input rating-read" value="5">
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="free-slots__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/slot-03.jpg') %>" alt="free-slots">
+                        </picture>
+
+                        <div class="card-body">
+                            <p class="card-title">Hot Honey</p>
+                            <p class="card-text text-subtitle">Aristocrat</p>
+                            <input type="text" class="rating-input rating-read" value="5">
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="free-slots__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/slot-03.jpg') %>" alt="free-slots">
+                        </picture>
+
+                        <div class="card-body">
+                            <p class="card-title">Royal 7 Fruits</p>
+                            <p class="card-text text-subtitle">Aristocrat</p>
+                            <input type="text" class="rating-input rating-read" value="4">
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="free-slots__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/slot-03.jpg') %>" alt="free-slots">
+                        </picture>
+
+                        <div class="card-body">
+                            <p class="card-title">Joker Dice</p>
+                            <p class="card-text text-subtitle">Aristocrat</p>
+                            <input type="text" class="rating-input rating-read" value="3">
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="free-slots__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/slot-03.jpg') %>" alt="free-slots">
+                        </picture>
+
+                        <div class="card-body">
+                            <p class="card-title">Aztec Pyramids</p>
+                            <p class="card-text text-subtitle">Aristocrat</p>
+                            <input type="text" class="rating-input rating-read" value="2">
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="free-slots__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/slot-03.jpg') %>" alt="free-slots">
+                        </picture>
+
+                        <div class="card-body">
+                            <p class="card-title">Gold Miners</p>
+                            <p class="card-text text-subtitle">Aristocrat</p>
+                            <input type="text" class="rating-input rating-read" value="1">
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <a href="#" class="btn btn-primary btn-lg">see all free slots</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section section-best-slots">
+            <div class="container">
+                <h2 class="section-best-slots__title title">The Best Slots Providers</h2>
+                <div class="best-slots">
+                    <div class="best-slots__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/best-slots01.png') %>" alt="best-slots">
+                        </picture>
+                        <div class="card-body">
+                            <p class="card-text">netent</p>
+                            <p class="card-title">1406 Games</p>
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="best-slots__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/best-slots02.png') %>" alt="best-slots">
+                        </picture>
+                        <div class="card-body">
+                            <p class="card-text">microgaming</p>
+                            <p class="card-title">1323 Games</p>
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="best-slots__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/best-slots03.png') %>" alt="best-slots">
+                        </picture>
+                        <div class="card-body">
+                            <p class="card-text">Yggrasil gaming</p>
+                            <p class="card-title">290 Games</p>
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="best-slots__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/best-slots04.png') %>" alt="best-slots">
+                        </picture>
+                        <div class="card-body">
+                            <p class="card-text">elk studios</p>
+                            <p class="card-title">348 Games</p>
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="best-slots__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/best-slots05.png') %>" alt="best-slots">
+                        </picture>
+                        <div class="card-body">
+                            <p class="card-text">novomatic</p>
+                            <p class="card-title">522 Games</p>
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section section-themes">
+            <div class="container">
+                <h2 class="section-themes__title title">Slot Themes</h2>
+                <div class="slot-theme">
+                    <div class="slot-theme__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/theme01.png') %>" alt="">
+                        </picture>
+                        <div class="card-body">
+                            <p class="card-text">Free Bugs Slot Online</p>
+                            <a href="" class="card-link btn btn-primary">see slots</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-theme__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/theme02.png') %>" alt="">
+                        </picture>
+                        <div class="card-body">
+                            <p class="card-text">Free Pub Slot Online</p>
+                            <a href="" class="card-link btn btn-primary">see slots</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-theme__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/theme03.png') %>" alt="">
+                        </picture>
+                        <div class="card-body">
+                            <p class="card-text">Free Maya Slot Online</p>
+                            <a href="" class="card-link btn btn-primary">see slots</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-theme__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/theme04.png') %>" alt="">
+                        </picture>
+                        <div class="card-body">
+                            <p class="card-text">Free Party and Nightlife Slot Online</p>
+                            <a href="" class="card-link btn btn-primary">see slots</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-theme__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/theme05.png') %>" alt="">
+                        </picture>
+                        <div class="card-body">
+                            <p class="card-text">Free Ocean Slot Online</p>
+                            <a href="" class="card-link btn btn-primary">see slots</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-theme__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/theme06.png') %>" alt="">
+                        </picture>
+                        <div class="card-body">
+                            <p class="card-text">Free Cherry Slot Online</p>
+                            <a href="" class="card-link btn btn-primary">see slots</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-theme__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/theme01.png') %>" alt="">
+                        </picture>
+                        <div class="card-body">
+                            <p class="card-text">Free History Slot Online</p>
+                            <a href="" class="card-link btn btn-primary">see slots</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-theme__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/theme02.png') %>" alt="">
+                        </picture>
+                        <div class="card-body">
+                            <p class="card-text">Free Marvel Slot Online</p>
+                            <a href="" class="card-link btn btn-primary">see slots</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-theme__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/theme03.png') %>" alt="">
+                        </picture>
+                        <div class="card-body">
+                            <p class="card-text">Free Chinese Slot Online</p>
+                            <a href="" class="card-link btn btn-primary">see slots</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-theme__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/theme04.png') %>" alt="">
+                        </picture>
+                        <div class="card-body">
+                            <p class="card-text">Free Dinozaur Slot Online</p>
+                            <a href="" class="card-link btn btn-primary">see slots</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-theme__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/theme05.png') %>" alt="">
+                        </picture>
+                        <div class="card-body">
+                            <p class="card-text">Free Card Slot Online</p>
+                            <a href="" class="card-link btn btn-primary">see slots</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-theme__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/theme06.png') %>" alt="">
+                        </picture>
+                        <div class="card-body">
+                            <p class="card-text">Free Car Slot Online</p>
+                            <a href="" class="card-link btn btn-primary">see slots</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 slot-theme__description">
+                        <p class="slot-theme__description-text clearfix"><img src="<%= require('./img/site-img01.png') %>" alt="">Use our games to try your hand try your hand at
+                            these fun mock progressive games — in real life casino games, this is where different players from anywhere in the world that are connected to the same
+                            progressive jackpot slot online can place bets continuously as they play — the more players — the higher the jackpot amount and the more reason for more
+                            players to join.
+                            <br>
+                            It becomes a beautiful snowball that will explode into an avalanche of money for the lucky winner! Our website has gained huge popularity with online
+                            gamblers because of the no-hassle installation and easy access with any free slot online on our website. <b>You don’t have to register or pay a deposit
+                                to start playing.</b> There is no lengthy download required before you have access to start playing and your access is unlimited. Once you start
+                            playing, we set you up with loads of free coins and you will be surprised at how easy it is to win bonus rounds, before you know it you will have
+                            learned lots of tricks and you will be a more confident online gambling player.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section section-faq">
+            <div class="container">
+                <h2 class="title">faq for casino games</h2>
+
+                <div class="accordion-list">
+                    <div class="accordion-list__box">
+                        <p class="accordion-list__box-title">Is it safe to play online casino slots?</p>
+                        <p class="accordion-list__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem itaque perferendis praesentium quibusdam repellat, sequi
+                            soluta voluptate. Autem culpa delectus deleniti dolores dolorum eius expedita illo illum in itaque magni nesciunt, pariatur perferendis quas repellat
+                            saepe temporibus ut vel veniam veritatis. Aut, cum in molestiae pariatur quia quis vel voluptas!</p>
+                    </div>
+
+                    <div class="accordion-list__box">
+                        <p class="accordion-list__box-title">Can I try slots online for free?</p>
+                        <p class="accordion-list__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid consequuntur delectus, dolor earum inventore nemo
+                            nostrum, pariatur quaerat quam quasi repudiandae ullam voluptatibus. Ad animi architecto assumenda at blanditiis commodi deleniti distinctio doloribus
+                            dolorum ducimus ea eveniet excepturi facere fuga iusto laborum magni maxime nihil provident quae qui quos repellat similique sint soluta tempore unde,
+                            veritatis vitae voluptas voluptatum!</p>
+                    </div>
+
+                    <div class="accordion-list__box active">
+                        <p class="accordion-list__box-title">What are the reliable real money slot developers?</p>
+                        <p class="accordion-list__box-text">Looking for decent slot games from a reliable and respectable casino software developer is an important step towards
+                            real money gambling. That’s why our experts recommend you to pay close attention to the real money slot games produced by such companies as NetEnt,
+                            Microgaming, NextGen, Playtech, Novomatic, Evolution Gaming, Rabcat, Play N’ Go, IGT, and some others.</p>
+                    </div>
+
+                    <div class="accordion-list__box">
+                        <p class="accordion-list__box-title">How many real money slot games are there?</p>
+                        <p class="accordion-list__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid blanditiis, cumque debitis doloribus excepturi fuga
+                            hic illo labore nam odit quibusdam sed sunt? At, blanditiis error est minima necessitatibus quam quos repellendus tempora. Animi autem harum nobis quis
+                            temporibus.</p>
+                    </div>
+
+                    <div class="accordion-list__box">
+                        <p class="accordion-list__box-title">Are there bonuses for choosing real money slots?</p>
+                        <p class="accordion-list__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae blanditiis culpa doloribus eaque eius enim, et
+                            exercitationem explicabo magnam molestias, porro quae quis recusandae rerum tempore veritatis voluptatem. Ab alias beatae corporis eius et ipsa ipsum
+                            laudantium minima nisi, pariatur, quod ut voluptas voluptates. Facere laborum molestiae odio praesentium tenetur? Fugiat nobis non quis recusandae
+                            reprehenderit! Adipisci, hic id laudantium odio quibusdam unde! Accusantium consequuntur doloribus illo minima neque nihil obcaecati officia porro quis
+                            rerum.</p>
+                    </div>
+
+                    <div class="accordion-list__box">
+                        <p class="accordion-list__box-title">Should I download real money slot games?</p>
+                        <p class="accordion-list__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus eius error ipsum iure libero maiores nihil odio
+                            optio perferendis quaerat quos sequi soluta suscipit tempora, vitae voluptatem? Assumenda aut autem dolores doloribus enim, expedita itaque laboriosam
+                            minus nostrum nulla obcaecati omnis, quidem recusandae repudiandae velit veniam voluptatum. Laboriosam, sunt?</p>
+                    </div>
+
+                    <div class="accordion-list__box">
+                        <p class="accordion-list__box-title">Are there slot games for real money with my favorite theme?</p>
+                        <p class="accordion-list__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquid asperiores aspernatur atque commodi
+                            consectetur dolore dolorum ducimus eaque illo ipsa necessitatibus odit, quaerat quibusdam rem reprehenderit, sit suscipit veritatis. Atque, iusto,
+                            pariatur. Animi at cupiditate dolor doloremque eum ipsum maxime nemo nobis, non nulla quasi qui quo quod repellat reprehenderit sequi tenetur! Aperiam
+                            facere fugiat ipsam iste itaque iure labore necessitatibus porro quisquam reiciendis sit, sunt? Atque blanditiis cupiditate ea facere ipsa mollitia
+                            quasi, repellendus sed, tempora temporibus ut.</p>
+                    </div>
+
+                    <div class="accordion-list__box">
+                        <p class="accordion-list__box-title">Should I stick to one real money slot game or try several?</p>
+                        <p class="accordion-list__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum earum, harum magni odio sed soluta voluptatum?
+                            Accusantium adipisci deserunt excepturi illum in modi nihil perspiciatis quaerat, vero vitae. Eaque, nisi?</p>
+                    </div>
+
+                    <div class="accordion-list__box">
+                        <p class="accordion-list__box-title">What strategies can I use for online real money slots?</p>
+                        <p class="accordion-list__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi aspernatur debitis ea ex explicabo fuga harum,
+                            inventore maxime mollitia nobis omnis possimus quasi quisquam, rem repellendus saepe ut voluptatibus!</p>
+                    </div>
+
+                    <div class="accordion-list__box">
+                        <p class="accordion-list__box-title">How big are the winnings in online slots real money casinos?</p>
+                        <p class="accordion-list__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid aperiam atque aut debitis distinctio harum illum
+                            ipsum laborum maxime nisi nobis obcaecati placeat qui rerum suscipit ullam unde, veniam?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="section">
             <div class="container">
                 <h2>Section Slider</h2>
 
                 <div class="main-slider swiper-container">
                     <div class="swiper-wrapper">
-                        <!-- Slides -->
+                        &lt;!&ndash; Slides &ndash;&gt;
                         <div class="swiper-slide">
                             <picture>
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
@@ -62,11 +668,10 @@
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
 
-                    <!--<div class="swiper-scrollbar"></div>-->
+                    &lt;!&ndash;<div class="swiper-scrollbar"></div>&ndash;&gt;
                 </div>
             </div>
         </div>
-
         <div class="section">
             <div class="container">
                 <h2>Section Pictures</h2>
@@ -79,7 +684,6 @@
                 </svg>
             </div>
         </div>
-
         <div class="section">
             <div class="container">
                 <h2>Section Range slider</h2>
@@ -94,21 +698,114 @@
                 <div class="slider-handles"><input type="range" max="1000"></div>
                 <div class="slider-handles"><input type="range"></div>
             </div>
-        </div>
+        </div>-->
     </main>
     <!-- CONTENT END -->
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container bg-info">
-            <h3 class="m-0">Footer Title</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="partners">
+                        <picture><img src="<%= require('./img/partner01.png') %>" alt="partner"></picture>
+                        <picture><img src="<%= require('./img/partner02.png') %>" alt="partner"></picture>
+                        <picture><img src="<%= require('./img/partner03.png') %>" alt="partner"></picture>
+                        <picture><img src="<%= require('./img/partner04.png') %>" alt="partner"></picture>
+                        <picture><img src="<%= require('./img/partner05.png') %>" alt="partner"></picture>
+                        <picture><img src="<%= require('./img/partner06.png') %>" alt="partner"></picture>
+                        <picture><img src="<%= require('./img/partner07.png') %>" alt="partner"></picture>
+                        <picture><img src="<%= require('./img/partner08.png') %>" alt="partner"></picture>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-content__box">
+                    <a href="index.html" class="footer__logo">
+                        <picture>
+                            <img src="<%= require('./img/footer-logo.svg') %>" alt="main-logo">
+                        </picture>
+                    </a>
+
+                    <p>Use our games to try your hand try your hand at these fun mock progressive games – in real life casino games, this is where different players from anywhere
+                        in the world that are connected to the same progressive jackpot slot online can place bets continuously as they play – the more players – the higher the
+                        jackpot amount and the more reason for more players to join it.</p>
+                </div>
+
+                <div class="footer-content__box">
+                    <div class="footer-content__menu">
+                        <p class="footer-content__menu-title">Popular categories</p>
+                        <ul class="footer-content__menu-list">
+                            <li><a href="#">Online Casinos by Different Countries</a></li>
+                            <li><a href="#">Best Online Slots</a></li>
+                            <li><a href="#">Casino Deposit Methods</a></li>
+                            <li><a href="#">Safe Online Casinos</a></li>
+                            <li><a href="#">Bitcoin Casinos</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-content__menu">
+                        <p class="footer-content__menu-title">Popular games</p>
+                        <ul class="footer-content__menu-list">
+                            <li><a href="#">Online Keno</a></li>
+                            <li><a href="#">New Popular Free Online Games</a></li>
+                            <li><a href="#">Online Pokies</a></li>
+                            <li><a href="#">Blackjack Online</a></li>
+                            <li><a href="#">Roulette Online</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-content__menu">
+                        <nav class="footer-content__menu-nav">
+                            <a href="#">about us</a>
+                            <a href="#">Privacy policy</a>
+                            <a href="#">terms of use</a>
+                            <a href="#">contacts</a>
+                            <a href="#">sitemap</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="footer-content__box">
+                    <div class="social">
+                        <a href="#facebook" target="_blank" class="social__link">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-facebook"></use>
+                            </svg>
+                        </a>
+
+                        <a href="#twitter" target="_blank" class="social__link">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-twitter"></use>
+                            </svg>
+                        </a>
+
+                        <a href="#pinterest" target="_blank" class="social__link">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-pinterest"></use>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="footer-warning">
+                        <svg>
+                            <use xlink:href="img/spritemap.svg#sprite-plus-18"></use>
+                        </svg>
+                        <p class="footer-warning__text">DM©A protected</p>
+                        <p class="footer-warning__text">begambeaware</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="copyright">Copyright ©2020</p>
         </div>
     </footer>
     <!-- FOOTER END -->
 </div>
 
 <div class="icon-load">
-    <picture><img src="<%= require('./img/loader.svg') %>" alt="pre-loader"></picture>
+    <picture><img src="<%= require('./img/logo-ico.svg') %>" alt="pre-loader"></picture>
 </div>
 <!-- BODY END   -->
 </body>

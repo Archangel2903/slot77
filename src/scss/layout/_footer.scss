@@ -5,6 +5,143 @@ footer.footer {
   order: 3;
   -webkit-order: 3;
   position: relative;
+  padding: 52px 15px 47px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 21px;
+  @extend %gradient-bg;
 }
 
-.copyright {}
+.partners {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  margin: 0 0 38px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin: 0 0 18px;
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    &:nth-child(1) {
+      width: 32%;
+      max-width: 400px;
+    }
+    &:nth-child(2) {
+      flex-wrap: nowrap;
+      width: 44%;
+      max-width: 560px;
+    }
+    &:nth-child(3) {
+      width: 20%;
+      max-width: 200px;
+    }
+  }
+
+  &__menu {
+    flex: 0 0 33%;
+    &:not(:last-child) {
+      margin: 0 20px 0 0;
+    }
+
+    &-title {
+      margin: 0 0 12px;
+      font-weight: 700;
+      line-height: 24px;
+      text-transform: uppercase;
+    }
+    &-list {
+      margin: 0;
+      padding: 0;
+
+      li {
+        a {
+          color: #ffffff;
+          font-weight: 500;
+          line-height: 24px;
+        }
+      }
+    }
+    &-nav {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      a {
+        color: #ffffff;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 26px;
+        letter-spacing: 0.06em;
+      }
+    }
+  }
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  margin: 0 0 26px;
+
+  &__link {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: #ffffff;
+      opacity: .6;
+      @include transition();
+    }
+    &:hover {
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.footer-warning {
+  width: 100%;
+  text-align: center;
+
+  svg {
+    display: block;
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 26px;
+    fill: #ffffff;
+  }
+
+  &__text {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 22px;
+    font-weight: 700;
+    &:not(:last-child) {
+      margin: 0 0 26px;
+    }
+  }
+}
+
+.copyright {
+  margin: 0;
+}
