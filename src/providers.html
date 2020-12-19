@@ -4,95 +4,317 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
-    <title>Главная</title>
+    <title>Providers page</title>
 </head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
     <!-- HEADER -->
     <header class="header">
-        <div class="container bg-light">
-            <h1>Header Title</h1>
+        <div class="container d-flex flex-row flex-wrap justify-content-between align-items-center align-content-center pt-4 pb-3">
+            <a href="index.html" class="header__logo">
+                <picture>
+                    <img src="<%= require('./img/logo.svg') %>" alt="main-logo">
+                </picture>
+            </a>
+
+            <div class="header__menu">
+                <button class="header__menu-switch d-lg-none">
+                    <span class="header__menu-switch header__menu-switch_line"></span>
+                </button>
+
+                <nav class="header__menu-list">
+                    <a href="#" class="header__menu-link">Online Casinos</a>
+                    <a href="#" class="header__menu-link">Free Slots</a>
+                    <a href="#" class="header__menu-link">All Providers</a>
+                    <a href="#" class="header__menu-link">Casino Bonuses</a>
+                    <a href="#" class="header__menu-link">Contacts</a>
+                </nav>
+            </div>
         </div>
     </header>
     <!-- HEADER END -->
 
     <!-- CONTENT -->
     <main class="content">
-        <div class="section">
+        <div class="section section-providers">
             <div class="container">
-                <h2>Section Slider</h2>
+                <picture class="all-providers__pic">
+                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/banner-img-02.png') %>" alt="">
+                </picture>
 
-                <div class="main-slider swiper-container">
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
+                <div class="all-providers">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Software Providers</li>
+                        </ol>
+                    </nav>
 
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
+                    <p class="all-providers__title">Software providers</p>
+                    <p class="all-providers__text">Use our games to try your hand try your hand at these fun mock progressive games — in real life casino games, this is where different players from anywhere in the world that are connected to the same progressive jackpot slot online can place bets continuously as they play – the more players – the higher the jackpot amount and the more reason for more players to join. It becomes a beautiful snowball that will explode into an avalanche of money for the lucky winner!</p>
+                </div>
+            </div>
+        </div>
 
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
+        <div class="section section-slot-providers">
+            <div class="container">
+                <h2 class="title">Choose A Slot Provider To Discover The Games They Offer</h2>
 
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
+                <div class="slot-providers">
+                    <div class="slot-providers__box card hidden-btn">
+                        <picture class="card-img-top">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/best-slots01.png') %>" alt="slot-provider">
+                        </picture>
+                        <div class="card-body">
+                            <div class="card-body-group">
+                                <p class="card-text">netenT</p>
+                                <p class="card-title">1406 Games</p>
+                            </div>
+                            <a href="#" class="card-link btn btn-primary">play now</a>
                         </div>
                     </div>
 
-                    <div class="swiper-pagination"></div>
+                    <div class="slot-providers__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/best-slots02.png') %>" alt="slot-provider">
+                        </picture>
+                        <div class="card-body">
+                            <div class="card-body-group">
+                                <p class="card-text">Microgaming</p>
+                                <p class="card-title">1323 Games</p>
+                            </div>
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
 
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="slot-providers__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/best-slots03.png') %>" alt="slot-provider">
+                        </picture>
+                        <div class="card-body">
+                            <div class="card-body-group">
+                                <p class="card-text">Yggdrasil</p>
+                                <p class="card-title">290 Games</p>
+                            </div>
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
 
-                    <!--<div class="swiper-scrollbar"></div>-->
+                    <div class="slot-providers__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/best-slots04.png') %>" alt="slot-provider">
+                        </picture>
+                        <div class="card-body">
+                            <div class="card-body-group">
+                                <p class="card-text">Elk Studios</p>
+                                <p class="card-title">348 Games</p>
+                            </div>
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-providers__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/best-slots05.png') %>" alt="slot-provider">
+                        </picture>
+                        <div class="card-body">
+                            <div class="card-body-group">
+                                <p class="card-text">Novomatic</p>
+                                <p class="card-title">522 Games</p>
+                            </div>
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-providers__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/best-slots05.png') %>" alt="slot-provider">
+                        </picture>
+                        <div class="card-body">
+                            <div class="card-body-group">
+                                <p class="card-text">Novomatic</p>
+                                <p class="card-title">522 Games</p>
+                            </div>
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-providers__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/best-slots04.png') %>" alt="slot-provider">
+                        </picture>
+                        <div class="card-body">
+                            <div class="card-body-group">
+                                <p class="card-text">Elk Studios</p>
+                                <p class="card-title">348 Games</p>
+                            </div>
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-providers__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/best-slots03.png') %>" alt="slot-provider">
+                        </picture>
+                        <div class="card-body">
+                            <div class="card-body-group">
+                                <p class="card-text">Yggdrasil</p>
+                                <p class="card-title">290 Games</p>
+                            </div>
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-providers__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/best-slots02.png') %>" alt="slot-provider">
+                        </picture>
+                        <div class="card-body">
+                            <div class="card-body-group">
+                                <p class="card-text">Microgaming</p>
+                                <p class="card-title">1323 Games</p>
+                            </div>
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-providers__box card hidden-btn">
+                        <picture class="card-img-top">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/best-slots01.png') %>" alt="slot-provider">
+                        </picture>
+                        <div class="card-body">
+                            <div class="card-body-group">
+                                <p class="card-text">netenT</p>
+                                <p class="card-title">1406 Games</p>
+                            </div>
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-providers__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/best-slots03.png') %>" alt="slot-provider">
+                        </picture>
+                        <div class="card-body">
+                            <div class="card-body-group">
+                                <p class="card-text">Yggdrasil</p>
+                                <p class="card-title">290 Games</p>
+                            </div>
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-providers__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/best-slots02.png') %>" alt="slot-provider">
+                        </picture>
+                        <div class="card-body">
+                            <div class="card-body-group">
+                                <p class="card-text">Microgaming</p>
+                                <p class="card-title">1323 Games</p>
+                            </div>
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-providers__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/best-slots04.png') %>" alt="slot-provider">
+                        </picture>
+                        <div class="card-body">
+                            <div class="card-body-group">
+                                <p class="card-text">Elk Studios</p>
+                                <p class="card-title">348 Games</p>
+                            </div>
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-providers__box card hidden-btn">
+                        <picture class="card-img-top">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/best-slots01.png') %>" alt="slot-provider">
+                        </picture>
+                        <div class="card-body">
+                            <div class="card-body-group">
+                                <p class="card-text">netenT</p>
+                                <p class="card-title">1406 Games</p>
+                            </div>
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
+
+                    <div class="slot-providers__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/best-slots05.png') %>" alt="slot-provider">
+                        </picture>
+                        <div class="card-body">
+                            <div class="card-body-group">
+                                <p class="card-text">Novomatic</p>
+                                <p class="card-title">522 Games</p>
+                            </div>
+                            <a href="#" class="card-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="section">
             <div class="container">
-                <h2>Section Pictures</h2>
-                <picture>
-                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="loader" title="loader">
-                </picture>
-
-                <svg>
-                    <use xlink:href="img/spritemap.svg#sprite-ok"></use>
-                </svg>
+                <h2 class="title">Online casino <span>slot77</span> is N1 guide for online gambling</h2>
+                <p>Congratulations you have landed on the website with the greatest variety and best selection in free slot online for fun games. The amount of satisfied return players we have is growing by the hour and it’s no surprise with all the free coins and bonus rounds on offer with all our games, what’s more is the fact that we offer you tricks and tips on learning how to play free slot online games. Because of the popularity of our games and the amount of players online at any given time our website has grown into being a favourite for online gambling gamers from all around the world. Our free and just for fun gambling games provide you with a chance to try out different online casino games and offer you a chance to practise before you commit yourself to playing with actual money on serious casino sites.</p>
             </div>
         </div>
 
-        <div class="section">
+        <div class="section section-recommended">
             <div class="container">
-                <h2>Section Range slider</h2>
+                <h2 class="title">You May Also Like</h2>
+                <div class="recommended">
+                    <div class="recommended__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/recommended01.png') %>" alt="recommended">
+                        </picture>
+                        <div class="card-body">
+                            <p class="card-title">Real Money Slots</p>
+                            <p class="card-text">Play the best real money slots of 2020 at our top casinos today. It’s never been easier to win big on you favourite slot games.</p>
+                            <a href="#" class="card-link btn btn-primary">Play now</a>
+                        </div>
+                    </div>
 
-                <div class="slider-range"><input type="range" value="75" min="1" max="100"></div>
-                <div class="slider-range"><input type="range" value="275" max="1000"></div>
-                <div class="slider-range"><input type="range"></div>
+                    <div class="recommended__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/recommended02.png') %>" alt="recommended">
+                        </picture>
+                        <div class="card-body">
+                            <p class="card-title">Best Online Casinos</p>
+                            <p class="card-text">Our best online casinos make thousands of players happy every day. Sign up today and get a top gaming experience in 2020</p>
+                            <a href="#" class="card-link btn btn-primary">Play now</a>
+                        </div>
+                    </div>
 
-                <br>
+                    <div class="recommended__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/recommended03.png') %>" alt="recommended">
+                        </picture>
+                        <div class="card-body">
+                            <p class="card-title">No Deposit Bonuses</p>
+                            <p class="card-text">Claim our no deposit bonuses and you can start playing at casinos without risking you own money. Sign up, play and win — easy!</p>
+                            <a href="#" class="card-link btn btn-primary">Play now</a>
+                        </div>
+                    </div>
 
-                <div class="slider-handles"><input type="range" min="2000" max="10000"></div>
-                <div class="slider-handles"><input type="range" max="1000"></div>
-                <div class="slider-handles"><input type="range"></div>
+                    <div class="recommended__box card hidden-btn">
+                        <picture>
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/recommended04.png') %>" alt="recommended">
+                        </picture>
+                        <div class="card-body">
+                            <p class="card-title">Free Slots</p>
+                            <p class="card-text">Play over 7700 free slots at slot777.com. We have the interest’s biggest library of free online slots.</p>
+                            <a href="#" class="card-link btn btn-primary">Play now</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -100,15 +322,110 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container bg-info">
-            <h3 class="m-0">Footer Title</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="partners">
+                        <picture><img src="<%= require('./img/partner01.png') %>" alt="partner"></picture>
+                        <picture><img src="<%= require('./img/partner02.png') %>" alt="partner"></picture>
+                        <picture><img src="<%= require('./img/partner03.png') %>" alt="partner"></picture>
+                        <picture><img src="<%= require('./img/partner04.png') %>" alt="partner"></picture>
+                        <picture><img src="<%= require('./img/partner05.png') %>" alt="partner"></picture>
+                        <picture><img src="<%= require('./img/partner06.png') %>" alt="partner"></picture>
+                        <picture><img src="<%= require('./img/partner07.png') %>" alt="partner"></picture>
+                        <picture><img src="<%= require('./img/partner08.png') %>" alt="partner"></picture>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-content__box">
+                    <a href="index.html" class="footer__logo">
+                        <picture>
+                            <img src="<%= require('./img/footer-logo.svg') %>" alt="main-logo">
+                        </picture>
+                    </a>
+
+                    <p>Use our games to try your hand try your hand at these fun mock progressive games – in real life casino games, this is where different players from anywhere
+                        in the world that are connected to the same progressive jackpot slot online can place bets continuously as they play – the more players – the higher the
+                        jackpot amount and the more reason for more players to join it.</p>
+                </div>
+
+                <div class="footer-content__box">
+                    <div class="footer-content__menu">
+                        <p class="footer-content__menu-title">Popular categories</p>
+                        <ul class="footer-content__menu-list">
+                            <li><a href="#">Online Casinos by Different Countries</a></li>
+                            <li><a href="#">Best Online Slots</a></li>
+                            <li><a href="#">Casino Deposit Methods</a></li>
+                            <li><a href="#">Safe Online Casinos</a></li>
+                            <li><a href="#">Bitcoin Casinos</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-content__menu">
+                        <p class="footer-content__menu-title">Popular games</p>
+                        <ul class="footer-content__menu-list">
+                            <li><a href="#">Online Keno</a></li>
+                            <li><a href="#">New Popular Free Online Games</a></li>
+                            <li><a href="#">Online Pokies</a></li>
+                            <li><a href="#">Blackjack Online</a></li>
+                            <li><a href="#">Roulette Online</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-content__menu">
+                        <nav class="footer-content__menu-nav">
+                            <a href="#">about us</a>
+                            <a href="#">Privacy policy</a>
+                            <a href="#">terms of use</a>
+                            <a href="#">contacts</a>
+                            <a href="#">sitemap</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="footer-content__box">
+                    <div class="social">
+                        <a href="#facebook" target="_blank" class="social__link">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-facebook"></use>
+                            </svg>
+                        </a>
+
+                        <a href="#twitter" target="_blank" class="social__link">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-twitter"></use>
+                            </svg>
+                        </a>
+
+                        <a href="#pinterest" target="_blank" class="social__link">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-pinterest"></use>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="footer-warning">
+                        <svg>
+                            <use xlink:href="img/spritemap.svg#sprite-plus-18"></use>
+                        </svg>
+                        <p class="footer-warning__text">DM©A protected</p>
+                        <p class="footer-warning__text">begambeaware</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="copyright">Copyright ©2020</p>
         </div>
     </footer>
     <!-- FOOTER END -->
 </div>
 
 <div class="icon-load">
-    <picture><img src="<%= require('./img/loader.svg') %>" alt="pre-loader"></picture>
+    <picture>
+        <img src="<%= require('./img/logo-ico.svg') %>" alt="pre-loader">
+    </picture>
 </div>
 <!-- BODY END   -->
 </body>

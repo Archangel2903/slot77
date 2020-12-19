@@ -103,6 +103,10 @@
   font-size: 30px;
   font-weight: 700;
   line-height: 41px;
+
+  span {
+    color: $main-second-color;
+  }
 }
 
 %gradient-bg {
@@ -111,111 +115,4 @@
   background: -webkit-radial-gradient(center, ellipse cover, #0f2165 1%,#00032e 100%);
   background: radial-gradient(ellipse at center, #0f2165 1%,#00032e 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f2165', endColorstr='#00032e',GradientType=1 );
-}
-
-.btn {
-  border: none;
-  border-radius: 30px;
-  box-shadow: none;
-  padding: 12px 34px;
-  outline: none !important;
-  font-size: 16px;
-  font-weight: 900;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  @include transition();
-  &-primary {
-    background: $main-second-color !important;
-    &:hover {
-      box-shadow: 0 40px 60px rgba(250, 154, 100, 0.25);
-    }
-    &:focus {
-      box-shadow: none;
-    }
-  }
-
-  &-lg {
-    padding: 18px 59px;
-  }
-  &-sm {
-
-  }
-}
-
-.card {
-  background: #ffffff;
-  border: 1px solid rgba(0, 19, 149, 0.06);
-  box-shadow: 0 5px 10px rgba(0, 20, 149, 0.15);
-  border-radius: 10px;
-  overflow: hidden;
-  @include transition();
-  &:hover {
-    box-shadow: 0 5px 10px rgba(0, 20, 149, 0.3);
-    transform: translateY(-10px);
-  }
-
-  &-img-top {
-
-  }
-  &-body {
-    padding: 23px 15px 32px;
-    background: #ffffff;
-    @include transition();
-  }
-  &-title {
-    margin: 0 0 8px;
-    color: $title-color;
-    font-weight: bold;
-    line-height: 25px;
-  }
-  &-text {
-    margin: 0 0 11px;
-    font-weight: 400;
-    line-height: 25px;
-    letter-spacing: 0.05em;
-    &.text-subtitle {
-      color: rgba(0, 19, 149, 0.4);
-      font-size: 12px;
-      font-weight: bold;
-      line-height: 16px;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-  }
-  &-link {
-    @include transition();
-  }
-
-  .rating-container {
-    margin: 0 0 13px;
-    text-align: center;
-  }
-  &.hidden-btn {
-    max-height: 283px;
-    &:hover {
-      .card {
-        &-body {
-          transform: translateY(-40%);
-        }
-        &-link {
-          opacity: 1;
-          visibility: visible;
-        }
-      }
-    }
-
-    .card-link {
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
-}
-
-.rating-container {
-  .star {
-    svg {
-      width: 15px;
-      height: 15px;
-    }
-  }
 }
