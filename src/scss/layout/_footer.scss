@@ -9,7 +9,7 @@ footer.footer {
   color: #ffffff;
   font-size: 14px;
   line-height: 21px;
-  @extend %gradient-bg;
+  @extend .gradient-bg;
 }
 
 .partners {

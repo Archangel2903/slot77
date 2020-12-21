@@ -29,6 +29,7 @@ header.header {
       justify-content: space-between;
     }
     &-link {
+      color: $text-color;
       text-decoration: none !important;
       &:hover {
         color: $main-second-color;
