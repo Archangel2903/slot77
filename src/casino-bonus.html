@@ -4,95 +4,398 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
-    <title>Главная</title>
+    <title>Casino Bonuses</title>
 </head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
     <!-- HEADER -->
     <header class="header">
-        <div class="container bg-light">
-            <h1>Header Title</h1>
+        <div class="container d-flex flex-row flex-wrap justify-content-between align-items-center align-content-center pt-4 pb-3">
+            <a href="index.html" class="header__logo">
+                <picture>
+                    <img src="<%= require('./img/logo.svg') %>" alt="main-logo">
+                </picture>
+            </a>
+
+            <div class="header__menu">
+                <button class="header__menu-switch d-lg-none">
+                    <span class="header__menu-switch header__menu-switch_line"></span>
+                </button>
+
+                <nav class="header__menu-list">
+                    <a href="#" class="header__menu-link">Online Casinos</a>
+                    <a href="free-slots.html" class="header__menu-link">Free Slots</a>
+                    <a href="providers.html" class="header__menu-link">All Providers</a>
+                    <a href="casino-bonus.html" class="header__menu-link">Casino Bonuses</a>
+                    <a href="#" class="header__menu-link">Contacts</a>
+                </nav>
+            </div>
         </div>
     </header>
     <!-- HEADER END -->
 
     <!-- CONTENT -->
     <main class="content">
-        <div class="section">
+        <div class="section section-banner">
+            <div class="container banner">
+                <picture class="banner__pic">
+                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/banner-img-03.png') %>" alt="banner-image">
+                </picture>
+
+                <div class="banner__body">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Online Casinos</li>
+                        </ol>
+                    </nav>
+
+                    <p class="title">online casino</p>
+                    <p class="banner__text">Use our games to try your hand try your hand at these fun mock progressive games – in real life casino games, this is where different players from anywhere in the world that are connected to the same progressive jackpot slot online can place bets continuously as they play — the more players — the higher the jackpot amount and the more reason for more players to join. It becomes a beautiful snowball that will explode into an avalanche of money for the lucky winner!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section section-top">
             <div class="container">
-                <h2>Section Slider</h2>
+                <h2 class="title text-center text-uppercase"><span>TOP 3</span> Online Casinos</h2>
 
-                <div class="main-slider swiper-container">
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
+                <div class="top">
+                    <div class="top__box order-1 order-md-2 first">
+                        <div class="top__box-head">
+                            <span class="top__box-number"></span>
+                            <input type="text" class="rating-input rating-read" value="5">
+                            <picture class="top__box-pic">
+                                <img src="<%= require('./img/casino-logo06.png') %>" alt="top-slot">
                             </picture>
                         </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
+                        <div class="top__box-body">
+                            <p class="top__box-text">Maneki Casino</p>
+                            <p class="top__box-title">$1033+83 Free Spins</p>
+                            <a href="#" class="top__box-link btn btn-primary">play now</a>
                         </div>
                     </div>
 
-                    <div class="swiper-pagination"></div>
+                    <div class="top__box order-2 order-md-1">
+                        <div class="top__box-head">
+                            <span class="top__box-number"></span>
+                            <input type="text" class="rating-input rating-read" value="4">
+                            <picture class="top__box-pic">
+                                <img src="<%= require('./img/casino-logo05.png') %>" alt="top-slot">
+                            </picture>
+                        </div>
+                        <div class="top__box-body">
+                            <p class="top__box-text">Play Amo Casino</p>
+                            <p class="top__box-title">300% to $31 000</p>
+                            <a href="#" class="top__box-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
 
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                    <!--<div class="swiper-scrollbar"></div>-->
+                    <div class="top__box order-2 order-md-3">
+                        <div class="top__box-head">
+                            <span class="top__box-number"></span>
+                            <input type="text" class="rating-input rating-read" value="3">
+                            <picture class="top__box-pic">
+                                <img src="<%= require('./img/casino-logo07.png') %>" alt="top-slot">
+                            </picture>
+                        </div>
+                        <div class="top__box-body">
+                            <p class="top__box-text">ZET Casino</p>
+                            <p class="top__box-title">350% to $3000</p>
+                            <a href="#" class="top__box-link btn btn-primary">play now</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="section">
             <div class="container">
-                <h2>Section Pictures</h2>
-                <picture>
-                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="loader" title="loader">
-                </picture>
+                <table class="table">
+                    <tr>
+                        <th>№</th>
+                        <th>casino</th>
+                        <th>Bonus</th>
+                        <th>Payment Time</th>
+                        <th>Rating</th>
+                        <th>Payment System</th>
+                        <th>Review</th>
+                    </tr>
+                    <!--!!!!!!!!!!!!-->
+                    <tr>
+                        <td><b>1</b></td>
+                        <td>
+                            <picture class="table-pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/casino-logo06.png') %>" alt="casino-image">
+                            </picture>
+                        </td>
+                        <td><b class="text-uppercase">$1033+83 Free Spins</b></td>
+                        <td><span>7-9 hours</span></td>
+                        <td><input type="text" value="4" class="rating-input rating-read"></td>
+                        <td>
+                            <div class="table-payment">
+                                <picture class="table-payment__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/payment01.png') %>" alt="paument-image">
+                                </picture>
 
-                <svg>
-                    <use xlink:href="img/spritemap.svg#sprite-ok"></use>
-                </svg>
+                                <picture class="table-payment__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/payment02.png') %>" alt="paument-image">
+                                </picture>
+
+                                <picture class="table-payment__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/payment03.png') %>" alt="paument-image">
+                                </picture>
+
+                                <picture class="table-payment__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/payment04.png') %>" alt="paument-image">
+                                </picture>
+
+                                <picture class="table-payment__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/payment05.png') %>" alt="paument-image">
+                                </picture>
+
+                                <picture class="table-payment__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/payment06.png') %>" alt="paument-image">
+                                </picture>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex flex-column flex-wrap justify-content-start align-items-center">
+                                <a href="#" class="btn btn-primary w-75">play</a>
+                                <a href="#" class="table-link">Rewiew</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>2</b></td>
+                        <td>
+                            <picture class="table-pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/casino-logo04.png') %>" alt="casino-image">
+                            </picture>
+                        </td>
+                        <td><b class="text-uppercase">300% to $31 000</b></td>
+                        <td><span>5-7 hours</span></td>
+                        <td><input type="text" value="4" class="rating-input rating-read"></td>
+                        <td>
+                            <div class="table-payment">
+                                <picture class="table-payment__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/payment01.png') %>" alt="paument-image">
+                                </picture>
+
+                                <picture class="table-payment__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/payment02.png') %>" alt="paument-image">
+                                </picture>
+
+                                <picture class="table-payment__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/payment03.png') %>" alt="paument-image">
+                                </picture>
+
+                                <picture class="table-payment__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/payment04.png') %>" alt="paument-image">
+                                </picture>
+
+                                <picture class="table-payment__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/payment05.png') %>" alt="paument-image">
+                                </picture>
+
+                                <picture class="table-payment__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/payment06.png') %>" alt="paument-image">
+                                </picture>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex flex-column flex-wrap justify-content-start align-items-center">
+                                <a href="#" class="btn btn-primary w-75">play</a>
+                                <a href="#" class="table-link">Rewiew</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>3</b>
+                        </td>
+                        <td>
+                            <picture class="table-pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/casino-logo05.png') %>" alt="casino-image">
+                            </picture>
+                        </td>
+                        <td><b class="text-uppercase">350% to $3000</b></td>
+                        <td><span>5-7 hours</span></td>
+                        <td><input type="text" value="4" class="rating-input rating-read"></td>
+                        <td>
+                            <div class="table-payment">
+                                <picture class="table-payment__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/payment01.png') %>" alt="paument-image">
+                                </picture>
+
+                                <picture class="table-payment__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/payment02.png') %>" alt="paument-image">
+                                </picture>
+
+                                <picture class="table-payment__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/payment03.png') %>" alt="paument-image">
+                                </picture>
+
+                                <picture class="table-payment__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/payment04.png') %>" alt="paument-image">
+                                </picture>
+
+                                <picture class="table-payment__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/payment05.png') %>" alt="paument-image">
+                                </picture>
+
+                                <picture class="table-payment__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/payment06.png') %>" alt="paument-image">
+                                </picture>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex flex-column flex-wrap justify-content-start align-items-center">
+                                <a href="#" class="btn btn-primary w-75">play</a>
+                                <a href="#" class="table-link">Rewiew</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
 
-        <div class="section">
+        <div class="section section-banner">
+            <div class="container banner banner_bonus justify-content-start">
+                <div class="banner__body">
+                    <p class="title">Best casino bonus guide. How to choose?</p>
+                    <p class="banner__text">There are several things that you need to take into consideration before choosing the best casino bonus. Bigger doesn’t always mean automatically better. Here’s a casino bonus guide that we recommend to evaluate before making that first deposit.
+                        <br>
+                        <br>
+                        <b>Amount to deposit.</b> How much are you planning to deposit? Usually, the first deposit bonus is the best bonus that casinos offer so you want to get the maximum benefit from it. If you are for example planning to deposit €50, choose a casino that offers the bonus up to €50 in order to get the maximum bonus.
+                    </p>
+                </div>
+                <picture class="banner__pic">
+                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/banner-img-04.png') %>" alt="banner-image">
+                </picture>
+            </div>
+        </div>
+
+        <div class="section section-bonus">
+            <div class="container text-block">
+                <p>Keep an eye on this and especially look whether it is bonus money or bonus money plus your own money that you have to wager. A high bonus isn’t great if the wagering requirement is unreasonable. Also, make sure that you can wager money on the games you are about to play. Sometimes slots from a certain provider aren’t allowed in the wagering, for example.</p>
+                <p>Does the casino have a valid license and a good reputation? There are many to choose from so select a good one. Also, make sure that:</p>
+
+                <div class="bonus-steps">
+                    <p class="bonus-steps__text">Games the casino <wbr>offers are good</p>
+                    <p class="bonus-steps__text">Payment methods are <wbr>suitable</p>
+                    <picture class="bonus-steps__pic">
+                        <img src="" data-src="<%= require('./img/bonus-steps.png') %>" alt="bonus-guide">
+                    </picture>
+                    <p class="bonus-steps__text">Your language is <wbr>supported</p>
+                    <p class="bonus-steps__text">The platform works well on <wbr>your device</p>
+                </div>
+
+                <p><strong>Biggest Casino Bonuses — How to Calculate</strong></p>
+                <p>Once the percentages start to rise it can be tricky to keep up. However, if you want to know how much to deposit in order to get the maximum bonus then there’s a simple formula. You take the maximum bonus that’s possible and divide it by the percentage which is split into decimal places after the first number. It’s best explained in an example</p>
+                <p><span class="semibold">100% up to €100 — How to max the bonus.</span></p>
+
+                <ul>
+                    <li>Maximum casino bonus available = €100</li>
+                    <li>The first digit of the percentage is 1 (no decimal places are necessary as the other numbers are 0)</li>
+                    <li>Divide €100 by 1 for your answer (€100 / 1 = €100)</li>
+                    <li>So €100 is what you need to deposit to get the full bonus in this case</li>
+                    <li>Let’s now try a 200 casino bonus example that’s a little trickier.</li>
+                </ul>
+
+                <p><span class="semibold">125% up to €200 — How to max the bonus</span></p>
+
+                <ul>
+                    <li>Maximum casino bonus = €200</li>
+                    <li>In this case, you would split the percentage to reach two decimal points — 125% =1.25</li>
+                    <li>€200 / 1.25 = €160</li>
+                    <li>€160 is what you need to deposit to get the full €200 casino bonus</li>
+                </ul>
+
+                <p><span class="medium"><i>NOTE: For percentages lower than 100, you place the numbers after the decimal points — e.g. 50% would be 0.5.</i></span></p>
+
+                <p>The best thing is you can use this formula every time to quickly find out how to get the biggest casino bonus from each offer. Just load up your device’s calculator and try it out.</p>
+            </div>
+        </div>
+
+        <div class="section section-faq">
             <div class="container">
-                <h2>Section Range slider</h2>
+                <h2 class="title">faq for casino games</h2>
 
-                <div class="slider-range"><input type="range" value="75" min="1" max="100"></div>
-                <div class="slider-range"><input type="range" value="275" max="1000"></div>
-                <div class="slider-range"><input type="range"></div>
+                <div class="accordion-list">
+                    <div class="accordion-list__box">
+                        <p class="accordion-list__box-title">Is it safe to play online casino slots?</p>
+                        <p class="accordion-list__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem itaque perferendis praesentium quibusdam repellat, sequi
+                            soluta voluptate. Autem culpa delectus deleniti dolores dolorum eius expedita illo illum in itaque magni nesciunt, pariatur perferendis quas repellat
+                            saepe temporibus ut vel veniam veritatis. Aut, cum in molestiae pariatur quia quis vel voluptas!</p>
+                    </div>
 
-                <br>
+                    <div class="accordion-list__box">
+                        <p class="accordion-list__box-title">Can I try slots online for free?</p>
+                        <p class="accordion-list__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid consequuntur delectus, dolor earum inventore nemo
+                            nostrum, pariatur quaerat quam quasi repudiandae ullam voluptatibus. Ad animi architecto assumenda at blanditiis commodi deleniti distinctio doloribus
+                            dolorum ducimus ea eveniet excepturi facere fuga iusto laborum magni maxime nihil provident quae qui quos repellat similique sint soluta tempore unde,
+                            veritatis vitae voluptas voluptatum!</p>
+                    </div>
 
-                <div class="slider-handles"><input type="range" min="2000" max="10000"></div>
-                <div class="slider-handles"><input type="range" max="1000"></div>
-                <div class="slider-handles"><input type="range"></div>
+                    <div class="accordion-list__box">
+                        <p class="accordion-list__box-title">What are the reliable real money slot developers?</p>
+                        <p class="accordion-list__box-text">Looking for decent slot games from a reliable and respectable casino software developer is an important step towards
+                            real money gambling. That’s why our experts recommend you to pay close attention to the real money slot games produced by such companies as NetEnt,
+                            Microgaming, NextGen, Playtech, Novomatic, Evolution Gaming, Rabcat, Play N’ Go, IGT, and some others.</p>
+                    </div>
+
+                    <div class="accordion-list__box">
+                        <p class="accordion-list__box-title">How many real money slot games are there?</p>
+                        <p class="accordion-list__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid blanditiis, cumque debitis doloribus excepturi fuga
+                            hic illo labore nam odit quibusdam sed sunt? At, blanditiis error est minima necessitatibus quam quos repellendus tempora. Animi autem harum nobis quis
+                            temporibus.</p>
+                    </div>
+
+                    <div class="accordion-list__box">
+                        <p class="accordion-list__box-title">Are there bonuses for choosing real money slots?</p>
+                        <p class="accordion-list__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae blanditiis culpa doloribus eaque eius enim, et
+                            exercitationem explicabo magnam molestias, porro quae quis recusandae rerum tempore veritatis voluptatem. Ab alias beatae corporis eius et ipsa ipsum
+                            laudantium minima nisi, pariatur, quod ut voluptas voluptates. Facere laborum molestiae odio praesentium tenetur? Fugiat nobis non quis recusandae
+                            reprehenderit! Adipisci, hic id laudantium odio quibusdam unde! Accusantium consequuntur doloribus illo minima neque nihil obcaecati officia porro quis
+                            rerum.</p>
+                    </div>
+
+                    <div class="accordion-list__box">
+                        <p class="accordion-list__box-title">Should I download real money slot games?</p>
+                        <p class="accordion-list__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus eius error ipsum iure libero maiores nihil odio
+                            optio perferendis quaerat quos sequi soluta suscipit tempora, vitae voluptatem? Assumenda aut autem dolores doloribus enim, expedita itaque laboriosam
+                            minus nostrum nulla obcaecati omnis, quidem recusandae repudiandae velit veniam voluptatum. Laboriosam, sunt?</p>
+                    </div>
+
+                    <div class="accordion-list__box">
+                        <p class="accordion-list__box-title">Are there slot games for real money with my favorite theme?</p>
+                        <p class="accordion-list__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquid asperiores aspernatur atque commodi
+                            consectetur dolore dolorum ducimus eaque illo ipsa necessitatibus odit, quaerat quibusdam rem reprehenderit, sit suscipit veritatis. Atque, iusto,
+                            pariatur. Animi at cupiditate dolor doloremque eum ipsum maxime nemo nobis, non nulla quasi qui quo quod repellat reprehenderit sequi tenetur! Aperiam
+                            facere fugiat ipsam iste itaque iure labore necessitatibus porro quisquam reiciendis sit, sunt? Atque blanditiis cupiditate ea facere ipsa mollitia
+                            quasi, repellendus sed, tempora temporibus ut.</p>
+                    </div>
+
+                    <div class="accordion-list__box">
+                        <p class="accordion-list__box-title">Should I stick to one real money slot game or try several?</p>
+                        <p class="accordion-list__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum earum, harum magni odio sed soluta voluptatum?
+                            Accusantium adipisci deserunt excepturi illum in modi nihil perspiciatis quaerat, vero vitae. Eaque, nisi?</p>
+                    </div>
+
+                    <div class="accordion-list__box">
+                        <p class="accordion-list__box-title">What strategies can I use for online real money slots?</p>
+                        <p class="accordion-list__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi aspernatur debitis ea ex explicabo fuga harum,
+                            inventore maxime mollitia nobis omnis possimus quasi quisquam, rem repellendus saepe ut voluptatibus!</p>
+                    </div>
+
+                    <div class="accordion-list__box">
+                        <p class="accordion-list__box-title">How big are the winnings in online slots real money casinos?</p>
+                        <p class="accordion-list__box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid aperiam atque aut debitis distinctio harum illum
+                            ipsum laborum maxime nisi nobis obcaecati placeat qui rerum suscipit ullam unde, veniam?</p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -100,15 +403,110 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container bg-info">
-            <h3 class="m-0">Footer Title</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="partners">
+                        <picture><img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner01.png') %>" alt="partner"></picture>
+                        <picture><img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner02.png') %>" alt="partner"></picture>
+                        <picture><img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner03.png') %>" alt="partner"></picture>
+                        <picture><img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner04.png') %>" alt="partner"></picture>
+                        <picture><img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner05.png') %>" alt="partner"></picture>
+                        <picture><img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner06.png') %>" alt="partner"></picture>
+                        <picture><img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner07.png') %>" alt="partner"></picture>
+                        <picture><img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/partner08.png') %>" alt="partner"></picture>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-content__box">
+                    <a href="index.html" class="footer__logo">
+                        <picture>
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/footer-logo.svg') %>" alt="main-logo">
+                        </picture>
+                    </a>
+
+                    <p>Use our games to try your hand try your hand at these fun mock progressive games – in real life casino games, this is where different players from anywhere
+                        in the world that are connected to the same progressive jackpot slot online can place bets continuously as they play – the more players – the higher the
+                        jackpot amount and the more reason for more players to join it.</p>
+                </div>
+
+                <div class="footer-content__box">
+                    <div class="footer-content__menu">
+                        <p class="footer-content__menu-title">Popular categories</p>
+                        <ul class="footer-content__menu-list">
+                            <li><a href="#">Online Casinos by Different Countries</a></li>
+                            <li><a href="#">Best Online Slots</a></li>
+                            <li><a href="#">Casino Deposit Methods</a></li>
+                            <li><a href="#">Safe Online Casinos</a></li>
+                            <li><a href="#">Bitcoin Casinos</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-content__menu">
+                        <p class="footer-content__menu-title">Popular games</p>
+                        <ul class="footer-content__menu-list">
+                            <li><a href="#">Online Keno</a></li>
+                            <li><a href="#">New Popular Free Online Games</a></li>
+                            <li><a href="#">Online Pokies</a></li>
+                            <li><a href="#">Blackjack Online</a></li>
+                            <li><a href="#">Roulette Online</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-content__menu">
+                        <nav class="footer-content__menu-nav">
+                            <a href="#">about us</a>
+                            <a href="#">Privacy policy</a>
+                            <a href="#">terms of use</a>
+                            <a href="#">contacts</a>
+                            <a href="#">sitemap</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="footer-content__box">
+                    <div class="social">
+                        <a href="#facebook" target="_blank" class="social__link">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-facebook"></use>
+                            </svg>
+                        </a>
+
+                        <a href="#twitter" target="_blank" class="social__link">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-twitter"></use>
+                            </svg>
+                        </a>
+
+                        <a href="#pinterest" target="_blank" class="social__link">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-pinterest"></use>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="footer-warning">
+                        <svg>
+                            <use xlink:href="img/spritemap.svg#sprite-plus-18"></use>
+                        </svg>
+                        <p class="footer-warning__text">DM©A protected</p>
+                        <p class="footer-warning__text">begambeaware</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="copyright">Copyright ©2020</p>
         </div>
     </footer>
     <!-- FOOTER END -->
 </div>
 
 <div class="icon-load">
-    <picture><img src="<%= require('./img/loader.svg') %>" alt="pre-loader"></picture>
+    <picture>
+        <img src="<%= require('./img/logo-ico.svg') %>" alt="pre-loader">
+    </picture>
 </div>
 <!-- BODY END   -->
 </body>
