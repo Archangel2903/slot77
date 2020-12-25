@@ -99,6 +99,7 @@
 }
 
 .section-banner {
+  color: #ffffff;
   @extend .gradient-bg;
 
   .title {
@@ -216,6 +217,31 @@
     line-height: 30px;
     &:hover {
       box-shadow: 0 2px 5px rgba(0, 20, 149, 0.3);
+    }
+  }
+  &-link {
+    padding: 8px 12px;
+  }
+
+  &-outline {
+    &-primary,
+    &-secondary,
+    &-success,
+    &-danger,
+    &-warning,
+    &-info,
+    &-light,
+    &-dark {
+      border: 1px solid;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: none;
+      &:hover {
+        background: none !important;
+        border-color: $main-second-color;
+        color: $main-second-color;
+      }
     }
   }
 
@@ -634,4 +660,31 @@
 
 .semibold {
   font-weight: 600 !important;
+}
+
+.flag-label {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 14px;
+    border-width: 22px 13px 12px;
+    border-style: solid;
+    border-color: $main-second-color $main-second-color transparent;
+  }
+}
+
+.form-control {
+  height: 54px;
+  border: 1px solid rgba(0, 19, 149, 0.06);
+  border-radius: 27px;
+  padding: 13px 30px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 4px rgba(0, 19, 149, 0.15);
+  color: rgba(0, 19, 149, .6) !important;
+
+  &:focus {
+    box-shadow: inset 0 6px 4px rgba(0, 19, 149, 0.1);
+  }
 }

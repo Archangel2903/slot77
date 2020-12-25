@@ -116,7 +116,25 @@ $(function () {
                     emptyStar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="none" stroke="#FA8D03" stroke-width="21.943" d="M512 47.927l115.19 354.52h372.767L698.382 621.553l2.465 7.581 112.728 346.938L512 756.965 210.427 976.072l115.19-354.519L24.044 402.447h372.765l115.19-354.52z"/></svg>',
                     filledStar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><defs><linearGradient id="logo-gradient" x1="33%" y1="0%" x2="50%" y2="100%" ><stop offset="0%" stop-color="#F1FF0A"></stop><stop offset="100%" stop-color="#FF5C00"></stop></linearGradient></defs><path fill="url(\'#logo-gradient\')" d="M512 25.059l120.868 371.99H1024L707.565 626.952l120.87 371.989L512 769.037 195.566 998.941l120.868-371.989L0 397.049h391.133l120.868-371.99z"/><path fill="url(\'#logo-gradient\')" d="M512 25.059l120.868 371.99H1024L707.565 626.952l120.87 371.989L512 769.037 195.566 998.941l120.868-371.989L0 397.049h391.133l120.868-371.99z"/></svg>',
                 });
-            } else {
+            }
+            else if (input.classList.contains('rating-full')) {
+                $(input).rating({
+                    // showCaption: true,
+                    showClear: false,
+                    displayOnly: true,
+                    min: 1,
+                    step: 0.05,
+                    max: 5,
+                    stars: 5,
+                    starCaptions: function(val) {
+                        return val;
+                    },
+                    size: 'xs',
+                    emptyStar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="none" stroke="#FA8D03" stroke-width="21.943" d="M512 47.927l115.19 354.52h372.767L698.382 621.553l2.465 7.581 112.728 346.938L512 756.965 210.427 976.072l115.19-354.519L24.044 402.447h372.765l115.19-354.52z"/></svg>',
+                    filledStar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><defs><linearGradient id="logo-gradient" x1="33%" y1="0%" x2="50%" y2="100%" ><stop offset="0%" stop-color="#F1FF0A"></stop><stop offset="100%" stop-color="#FF5C00"></stop></linearGradient></defs><path fill="url(\'#logo-gradient\')" d="M512 25.059l120.868 371.99H1024L707.565 626.952l120.87 371.989L512 769.037 195.566 998.941l120.868-371.989L0 397.049h391.133l120.868-371.99z"/><path fill="url(\'#logo-gradient\')" d="M512 25.059l120.868 371.99H1024L707.565 626.952l120.87 371.989L512 769.037 195.566 998.941l120.868-371.989L0 397.049h391.133l120.868-371.99z"/></svg>',
+                });
+            }
+            else {
                 $(input).rating({
                     showCaption: false,
                     showClear: false,
@@ -150,6 +168,12 @@ $(function () {
                 $(this).addClass('active').find('.accordion-list__box-text').slideDown(350);
             }
             e.stopPropagation();
+        });
+    }
+
+    if ($('#game_start').length) {
+        $('#game_start').on('click', function () {
+            $(this).parent().toggleClass('active');
         });
     }
 

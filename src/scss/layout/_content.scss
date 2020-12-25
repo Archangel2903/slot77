@@ -477,19 +477,389 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: flex-start;
   align-content: flex-start;
   padding: 50px 0;
   &__text {
     flex: 1 1 50%;
-    margin: 0 !important;
+    display: inline-block;
+    max-width: 220px;
+
+    &:nth-child(1) {
+      margin: 10px 0 0px -13% !important;
+    }
+    &:nth-child(2) {
+      margin: 10px -6% 0 5% !important;
+    }
+    &:nth-last-child(2) {
+      margin: -10% -10% 0 0 !important;
+    }
+    &:nth-last-child(1) {
+      margin: -10% -15% 0 12% !important;
+    }
   }
   &__pic {
     flex: 1 1 100%;
+    margin: -110px 0 0;
     text-align: center;
     img {
 
     }
+  }
+}
+
+/* SLOT REVIEW */
+.sidebar {
+  max-width: 25%;
+
+  .title {
+    margin: 0 0 26px;
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-transform: none !important;
+  }
+}
+
+.slot-review {
+  padding-top: 27px;
+  padding-bottom: 65px;
+
+  .title {
+    margin: 0 0 11px;
+    color: $main-second-color;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+  &__game {
+    width: 70%;
+  }
+}
+
+.slot-game {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  margin-left: -45px;
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 32px 45px 44px;
+  background: #0C2064;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), inset 10px 10px 30px rgba(255, 255, 255, 0.04);
+
+  &__head {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin: 0 0 30px;
+  }
+  &__provider {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    align-content: flex-end;
+    margin-right: 78px;
+
+    img {
+      height: 44px;
+    }
+
+    &-link {
+      margin-left: 14px;
+      color: #fff;
+      font-size: 16px;
+      text-decoration: underline;
+      &:hover {
+        color: $main-second-color;
+      }
+    }
+  }
+  &__rating-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    color: #ffffff;
+
+    .rating-container {
+      margin: 0 12px;
+
+      .star svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  &__area {
+    position: relative;
+    height: 505px;
+    margin: 0 0 30px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .7);
+      z-index: 1;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
+    }
+  }
+  &__start {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+  &__row-box {
+    margin: 0 0 30px;
+  }
+  &__buttons {
+    margin: 0 17px;
+  }
+}
+
+/* SLOT CONTENT */
+.slot-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.slot-content {
+  width: 74%;
+}
+
+.slot-details {
+  margin: 0 0 45px;
+  border: 1px solid rgba(0, 19, 149, 0.1);
+  border-radius: 10px;
+  background: #FFFFFF;
+  box-shadow: inset 0 10px 20px rgba(0, 19, 149, 0.1);
+  padding: 36px 57px;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 400px;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    li {
+      flex: 1 1 auto;
+      display: inline-flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: unset;
+      width: 50%;
+      margin: 0 0 16px;
+      padding: 0 2%;
+
+      &> * {
+        flex: 1 1 50%;
+      }
+    }
+  }
+  &__link {
+
+  }
+  &__text {
+    color: $main-second-color;
+    font-weight: 600;
+  }
+}
+
+.slot-sidebar {
+  width: 24%;
+
+  &__box {
+    border: 0.3px solid rgba(0, 20, 149, 0.3);
+    border-radius: 10px;
+    padding: 16px;
+    background: #FDFDFD;
+    &:not(:last-child) {
+      margin: 0 0 45px;
+    }
+
+    .title {
+      margin: 0 0 16px;
+      color: $main-first-color !important;
+      font-size: 18px;
+      line-height: 1;
+      text-align: center;
+      text-transform: none !important;
+    }
+    &-content {
+
+    }
+    &-card {
+      display: inline-flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      width: 100%;
+      &:not(:last-child) {
+        margin: 0 0 16px;
+      }
+      &-name {
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+      }
+
+      img {
+        width: 74px;
+        height: 50px;
+        border-radius: 10px;
+      }
+
+      .btn {
+        padding: 4px 22px;
+      }
+    }
+  }
+}
+
+.slot-img-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin: 0 0 45px;
+  &> * {
+    flex: 0 0 auto;
+  }
+  img {
+    width: 218px;
+    height: 164px;
+  }
+}
+
+/* REVIEWS */
+.section-reviews {
+  padding: 40px 0;
+
+  .title {
+    margin: 0 0 30px;
+    color: $main-second-color;
+    text-transform: uppercase;
+  }
+}
+
+.reviews {
+  &__box {
+    margin: 0 0 30px;
+
+    &-head {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-end;
+      align-content: flex-end;
+      margin: 0 0 30px;
+
+      &> * {
+        margin-right: 16px;
+        line-height: 1;
+      }
+
+      .rating-container {
+        .star svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+  &__timing {
+    color: rgba(255, 255, 255, .7);
+    font-size: 20px;
+    font-weight: 600;
+  }
+  &__author {
+    font-size: 22px;
+    text-transform: capitalize;
+  }
+  &__text {
+    margin: 0;
+  }
+  &__link {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: rgba(255, 255, 255, .7);
+    text-transform: capitalize;
+
+    &:hover {
+      color: $main-second-color;
+    }
+  }
+}
+
+/* SEND REVIEW */
+.section-send-reviews {
+  .title {
+    text-transform: none;
+  }
+}
+
+.send-review {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  &__form {
+    width: 50%;
+
+    textarea {
+      min-height: 124px;
+      max-height: 250px;
+    }
+  }
+
+  &__pic {
+    position: absolute;
+    right: -14%;
+    bottom: -135px;
+    z-index: 1;
   }
 }
