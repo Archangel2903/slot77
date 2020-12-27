@@ -10,13 +10,87 @@
 
 // max-width
 @include media-breakpoint-down(lg) {
+  .banner {
+    &__list {
+      width: 28%;
+    }
+  }
+
   .header {
     &__menu {
       width: 65%;
     }
   }
+
+  .best-slots {
+    &__box {
+      margin: 0 0 25px;
+    }
+  }
 }
 @include media-breakpoint-down(md) {
+  .section {
+    margin: 0 0 55px;
+  }
+
+  .banner {
+    flex-wrap: wrap;
+    .banner {
+      &__list {
+        order: 2;
+        position: relative;
+        top: 0;
+        width: 100%;
+        max-width: none;
+        margin: -20px 0 30px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 0;
+        padding: 10px 15px 15px;
+        background: #0C2064;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), inset 10px 10px 30px rgba(255, 255, 255, 0.04);
+        text-align: center;
+
+        ul {
+          position: relative;
+          max-height: 180px;
+          overflow: hidden;
+          text-align: left;
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            box-shadow: 0 0px 15px 16px #0c2064;
+          }
+
+          a {
+            color: #ffffff;
+            text-decoration: underline;
+          }
+        }
+
+        .btn-link {
+          color: #ffffff;
+        }
+      }
+    }
+
+    &__body {
+      order: 1 !important;;
+      width: 100%;
+    }
+    &__pic {
+      order: 2;
+      display: none;
+    }
+  }
+
+  .btn {
+    padding: 12px 20px;
+  }
+
   .header {
     &__menu {
       width: auto;
@@ -24,19 +98,359 @@
       &-list {
         position: fixed;
         top: 0;
-        left: 0;
-        display: none;
+        left: -100%;
         width: 100%;
         height: 100%;
+        opacity: 0;
+        visibility: hidden;
         background: #ffffff;
+        @include transition();
 
         &.active {
-          display: flex;
+          top: 0;
+          left: 0;
+          flex-direction: column;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          padding: 90px 16px 20px;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      &-link {
+        margin: 0 0 18px;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 35px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .section-main-banner {
+    padding: 55px 0 65px;
+  }
+
+  .main-banner {
+    &__content {
+      max-width: none;
+    }
+    &__pic {
+      display: none;
+    }
+  }
+
+  .top-slots {
+    justify-content: space-around;
+  }
+
+  .best-casino {
+    justify-content: space-around;
+  }
+
+  .free-slots {
+    justify-content: space-around;
+  }
+
+  .best-slots {
+    justify-content: space-around;
+  }
+
+  .slot-theme {
+    justify-content: space-around;
+  }
+
+  .slot-theme {
+    &__description-text {
+      img {
+        width: 165px;
+        height: 165px;
+      }
+    }
+  }
+
+  .search-tag {
+    &__link {
+
+    }
+  }
+
+  .send-review {
+    &__pic {
+      display: none;
+    }
+  }
+}
+@include media-breakpoint-down(sm) {
+  .table {
+    th, td {
+      flex: 1 1 33%;
+      display: none;
+      font-size: 16px;
+
+      &:nth-child(2), &:nth-child(3), &:nth-last-child(1) {
+        display: block;
+      }
+    }
+
+    .btn {
+      padding: 11px 16px;
+      font-size: 14px;
+    }
+  }
+
+  .best-slots-banner {
+    .banner__pic img {
+      top: auto;
+      right: 15px;
+      bottom: -7px;
+      left: auto;
+      width: 121px;
+      height: 117px;
+      transform: rotate3d(0, 1, 0, 180deg);
+    }
+  }
+
+  .partners {
+    picture {
+      flex: 1 1 auto;
+      text-align: center;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .footer-content {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    &__box {
+      width: 100% !important;
+      max-width: none !important;
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  .copyright {
+    display: none;
+  }
+}
+@include media-breakpoint-down(xs) {
+  .title {
+    margin: 0 0 30px;
+    font-size: 25px;
+    line-height: 35px;
+    text-align: center;
+    text-transform: none;
+  }
+
+  .accordion-list {
+    &__box {
+      &-title {
+        font-size: 16px;
+        line-height: 26px;
+      }
+      &-text {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  .main-banner {
+    &__content {
+      text-align: center;
+    }
+    &__title {
+      margin: 0 0 20px;
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+
+  .top-slots {
+    &__box {
+      margin-right: 20px;
+    }
+  }
+
+  .best-casino {
+    &__box {
+      max-width: 244px;
+      margin-right: 20px;
+    }
+  }
+
+  .free-slots {
+    &__box {
+      max-width: 106px;
+      max-height: 126px;
+      margin: 0 0 10px;
+
+      img {
+        height: 70px;
+      }
+
+      .card {
+        &-body {
+          padding: 15px 10px !important;
+        }
+        &-title {
+          font-size: 14px;
+          font-weight: 400;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        &-text {
+          display: none;
+        }
+      }
+
+      .rating-container {
+        display: none;
+      }
+
+      .btn {
+        padding: 8px 5px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .best-slots {
+    &__box {
+      max-width: 181px;
+      margin-right: 20px;
+
+      &.card.hidden-btn {
+        max-height: 204px;
+      }
+    }
+  }
+
+  .slot-theme {
+    margin: 0 0 15px;
+    &__box {
+      max-width: 182px;
+      max-height: 212px;
+      margin-right: 20px;
+
+      img {
+        height: 130px;
+      }
+
+      .card-body {
+        padding: 13px 16px 16px;
+      }
+    }
+    &__description-text {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
+  .send-review {
+    justify-content: center;
+  }
+
+  .partners {
+    picture {
+      width: 25%;
+      margin: 0 0 20px;
+
+      img {
+        max-width: 73px;
+      }
+    }
+  }
+
+  .footer-content {
+    &__box {
+      &:nth-child(2) {
+        flex-wrap: wrap;
+      }
+    }
+
+    &__menu {
+      flex: 0 0 45%;
+      &:nth-child(3) {
+        flex: 0 0 100%;
+      }
+
+      &-nav {
+        max-height: 160px;
+        margin: 20px 0;
+
+        a {
+          margin: 0 0 20px;
         }
       }
     }
   }
 }
-@include media-breakpoint-down(sm) {}
-@include media-breakpoint-down(xs) {}
-@media screen and (max-width: 320px) {}
+@media screen and (max-width: 460px) {
+  .table {
+    &-pic img {
+      width: 101px;
+      height: 52px;
+    }
+  }
+  .footer-content {
+    &__logo {
+
+    }
+    &__text {
+      margin: 0 0 30px;
+    }
+    &__box {
+      &:nth-child(2) {
+        justify-content: space-between;
+      }
+    }
+    &__menu {
+      margin: 0 !important;
+      &-title {
+        margin: 0 0 14px;
+      }
+      &-list {
+        li {
+          &:not(:last-child) {
+            margin: 0 0 10px;
+          }
+        }
+      }
+
+      &-nav a {
+        flex: 1 1 50%;
+        margin: 0 0 20px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 395px) {
+  .best-casino {
+    &__box {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  .best-slots {
+    &__box {
+      margin-right: 10px;
+    }
+  }
+
+  .slot-theme {
+    &__box {
+      margin-right: 0;
+    }
+  }
+}

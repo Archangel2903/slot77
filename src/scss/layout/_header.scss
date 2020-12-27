@@ -33,35 +33,68 @@ header.header {
         content: '';
         position: absolute;
         top: 0;
+        left: 0;
         display: block;
         width: 53px;
         height: 9px;
         border-radius: 10px;
         background: $main-first-color;
+        @include transition();
       }
       &_line {
+        position: absolute;
+        top: 50%;
+        left: 0;
         display: block;
         width: 26px;
         height: 9px;
         border-radius: 10px;
         background: $main-first-color;
+        transform: translateY(-50%);
+        @include transition();
       }
       &:after {
         content: '';
         position: absolute;
         bottom: 0;
+        left: 0;
         display: block;
         width: 45px;
         height: 9px;
         border-radius: 10px;
         background: $main-first-color;
+        @include transition();
       }
 
       &:hover {
+        &:before, &:after {
+          width: 100%;
+        }
 
+        .header__menu-switch_line {
+          width: 100%;
+        }
       }
       &.active {
+        width: 40px;
+        height: 40px;
         z-index: 11;
+
+        &:before, &:after {
+          top: 50%;
+          left: 0;
+          width: 40px;
+          height: 1px;
+          transform: translateY(-50%) rotate(45deg);
+        }
+        &:after {
+          transform: translateY(-50%) rotate(-45deg);
+        }
+        .header__menu-switch_line {
+          opacity: 0;
+          visibility: hidden;
+          filter: blur(10px);
+        }
       }
     }
     &-list {
