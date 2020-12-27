@@ -24,6 +24,12 @@ $(window).on('load', function () {
 });
 
 $(function () {
+    // Burger button
+    $('.header__menu-switch').on('click', function () {
+        $(this).toggleClass('active');
+        $(this).next().toggleClass('active');
+    });
+
     // Swiper slider
     if ($('.swiper-container').length) {
         let slider;

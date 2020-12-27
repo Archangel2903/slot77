@@ -21,12 +21,57 @@ header.header {
   &__menu {
     width: 100%;
     max-width: 900px;
+    &-switch {
+      position: relative;
+      width: 53px;
+      height: 37px;
+      margin: 0;
+      border: none;
+      padding: 0;
+      background: none;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        display: block;
+        width: 53px;
+        height: 9px;
+        border-radius: 10px;
+        background: $main-first-color;
+      }
+      &_line {
+        display: block;
+        width: 26px;
+        height: 9px;
+        border-radius: 10px;
+        background: $main-first-color;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 45px;
+        height: 9px;
+        border-radius: 10px;
+        background: $main-first-color;
+      }
+
+      &:hover {
+
+      }
+      &.active {
+        z-index: 11;
+      }
+    }
     &-list {
+      position: relative;
       width: 100%;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
+      z-index: 10;
     }
     &-link {
       color: $text-color;

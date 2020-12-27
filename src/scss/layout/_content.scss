@@ -12,7 +12,6 @@
 
 /* MAIN BANNER */
 .section-main-banner {
-  height: 475px;
   padding: 85px 0 40px;
 
   & > .container {
@@ -230,34 +229,44 @@
       max-height: 156px;
       margin: 0 0 50px;
       text-align: center;
+
+      &:hover {
+        .card {
+          &-body {
+            padding: 8px 12px;
+          }
+        }
+      }
     }
     img {
       width: 100%;
       height: 108px;
     }
-    .card {
-      &-body {
-        padding: 12px 12px 15px;
+    &.hidden-btn {
+      .card {
+        &-body {
+          padding: 8px 12px;
 
-        &-group > * {
-          flex: 0 0 50%;
-          margin: 0;
+          &-group > * {
+            flex: 0 0 50%;
+            margin: 0;
+          }
         }
-      }
-      &-title {
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 22px;
-        text-align: right;
-      }
-      &-text {
-        font-size: 12px;
-        font-weight: bold;
-        line-height: 16px;
-        letter-spacing: 0.1em;
-        text-align: left;
-        text-transform: uppercase;
-        word-break: break-all;
+        &-title {
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 22px;
+          text-align: right;
+        }
+        &-text {
+          font-size: 12px;
+          font-weight: bold;
+          line-height: 16px;
+          letter-spacing: 0.1em;
+          text-align: left;
+          text-transform: uppercase;
+          word-break: break-all;
+        }
       }
     }
   }
@@ -310,26 +319,31 @@
       max-height: 180px;
       margin: 0 0 44px;
       text-align: center;
-      &:hover {
-        .card-link {
-          display: inline-block;
-        }
-      }
       img {
         width: 100%;
         height: 125px;
       }
-    }
-    .card {
-      &-body {
-        padding: 9px 16px;
-        transform: translateY(-20%);
-      }
-      &-title {
-        text-align: left;
-      }
-      &-link {
-        display: none;
+
+      &.hidden-btn {
+        .card {
+          &-body {
+            padding: 9px 16px;
+            transform: translateY(-20%);
+          }
+          &-title {
+            text-align: left;
+          }
+          &-link {
+            display: none;
+          }
+        }
+        &:hover {
+          .card {
+            &-link {
+              display: inline-block;
+            }
+          }
+        }
       }
     }
   }
@@ -511,7 +525,7 @@
 
 /* SLOT REVIEW */
 .sidebar {
-  max-width: 25%;
+  max-width: 24%;
 
   .title {
     margin: 0 0 26px;
@@ -684,7 +698,7 @@
       margin: 0 0 16px;
       padding: 0 2%;
 
-      &> * {
+      & > * {
         flex: 1 1 50%;
       }
     }
@@ -759,7 +773,7 @@
   align-items: flex-start;
   align-content: flex-start;
   margin: 0 0 45px;
-  &> * {
+  & > * {
     flex: 0 0 auto;
   }
   img {
@@ -792,7 +806,7 @@
       align-content: flex-end;
       margin: 0 0 30px;
 
-      &> * {
+      & > * {
         margin-right: 16px;
         line-height: 1;
       }
@@ -861,5 +875,299 @@
     right: -14%;
     bottom: -135px;
     z-index: 1;
+  }
+}
+
+/* CASINO REVIEW */
+.section-casino-review {
+  padding: 30px 0 45px;
+
+  .title {
+    margin: 0 0 27px;
+    color: $main-second-color;
+  }
+}
+
+.casino-review {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  margin: 0 0 30px;
+
+  &__logo {
+    text-align: center;
+
+    .rating-container {
+      margin: 0 0 20px;
+      .star svg {
+        width: 31px;
+        height: 31px;
+      }
+      .caption {
+        .label {
+          font-size: 26px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    &-pic {
+      img {
+        width: 198px;
+        max-height: 198px;
+      }
+    }
+  }
+  &__rating {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+
+    &-box {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      &:not(:last-child) {
+        margin: 0 0 15px;
+      }
+
+      .rating-container {
+        margin-left: 80px;
+        .star svg {
+          width: 31px;
+          height: 31px;
+        }
+        .caption {
+          width: 40px;
+        }
+      }
+    }
+
+    &-name {
+
+    }
+  }
+  &__pay {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    &-box {
+      display: inline-flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: center;
+      &:not(:last-child) {
+        margin: 0 0 15px;
+      }
+
+      span:first-child {
+        width: 85px;
+      }
+    }
+
+    &-method {
+      display: inline-flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-left: 25px;
+
+      &-pic {
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
+        img {
+          width: 45px;
+          height: 26px;
+        }
+      }
+    }
+  }
+}
+
+.welcome-bonus {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 305px;
+  margin: 0 0 22px;
+  padding: 20px;
+  background: #0C2064;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), inset 10px 10px 30px rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
+
+  &__title {
+    margin: 0 0 4px;
+    color: $main-second-color;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  &__text {
+    margin: 0 0 12px;
+  }
+}
+
+.casino-compare {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  .title {
+    width: 100%;
+    margin: 0 0 20px;
+    text-transform: none;
+  }
+
+  &__list {
+    max-width: 520px;
+    margin: 0 0 30px;
+    padding-left: 20px;
+    &:not(:last-child) {
+      margin-right: 45px;
+    }
+    &.list-pros {
+      li {
+        &::marker {
+          content: '+';
+        }
+      }
+    }
+    &.list-cons {
+      li {
+        color: rgba(255, 255, 255, 0.7);
+
+        &::marker {
+          content: '-';
+        }
+      }
+    }
+
+    li {
+      padding-left: 10px;
+      &:not(:last-child) {
+        margin: 0 0 20px;
+      }
+
+      &::marker {
+        content: '';
+        font-size: 30px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+/* CASINO DESCRIPTION */
+.casino {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  &__description {
+    width: 74%;
+
+    .title {
+      margin: 0 0 30px;
+      text-transform: none;
+    }
+
+    p:not(:last-of-type) {
+      margin: 0 0 40px;
+    }
+
+    .table {
+      margin: 0 0 30px;
+
+      tr {
+        border-top: 1px solid rgba(0, 19, 149, 0.5);
+        border-bottom: none;
+        &:first-of-type {
+          padding: 12px 0;
+        }
+        &:last-of-type {
+          border-bottom: 1px solid rgba(0, 19, 149, 0.5);
+        }
+      }
+
+      &-text {
+        letter-spacing: 0.05em;
+      }
+    }
+  }
+
+  &__sidebar {
+    &-box {
+      padding: 30px 20px 35px;
+      border: 1px solid rgba(0, 19, 149, 0.06);
+      border-radius: 10px;
+      background: #FFFFFF;
+      box-shadow: 0 5px 10px rgba(0, 20, 149, 0.15);
+
+      &-title {
+        margin: 0 0 18px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding: 0;
+
+      li {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        width: 100%;
+        &:not(:last-child) {
+          margin: 0 0 16px;
+        }
+      }
+      &-caption {
+        width: 100px;
+        margin-right: 16px;
+        color: $main-first-color;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+      }
+      &-text {
+        width: 160px;
+        color: $main-second-color;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    &-link {
+
+    }
   }
 }

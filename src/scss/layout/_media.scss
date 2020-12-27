@@ -9,8 +9,34 @@
 @include media-breakpoint-up(xl) {}
 
 // max-width
-@include media-breakpoint-down(lg) {}
-@include media-breakpoint-down(md) {}
+@include media-breakpoint-down(lg) {
+  .header {
+    &__menu {
+      width: 65%;
+    }
+  }
+}
+@include media-breakpoint-down(md) {
+  .header {
+    &__menu {
+      width: auto;
+
+      &-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+
+        &.active {
+          display: flex;
+        }
+      }
+    }
+  }
+}
 @include media-breakpoint-down(sm) {}
 @include media-breakpoint-down(xs) {}
 @media screen and (max-width: 320px) {}
