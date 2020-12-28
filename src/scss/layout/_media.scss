@@ -2,15 +2,33 @@
 ****************** MEDIA STYLES ******************
 *************************************************/
 // min-width
-@media screen and (min-width: 320px) {}
-@include media-breakpoint-up(sm) {}
-@include media-breakpoint-up(md) {}
-@include media-breakpoint-up(lg) {}
-@include media-breakpoint-up(xl) {}
+@media screen and (min-width: 320px) {
+}
+
+@include media-breakpoint-up(sm) {
+}
+
+@include media-breakpoint-up(md) {
+}
+
+@include media-breakpoint-up(lg) {
+}
+
+@include media-breakpoint-up(xl) {
+}
 
 // max-width
 @include media-breakpoint-down(lg) {
   .banner {
+    &_bonus {
+      .banner {
+        &__pic {
+          img {
+            right: -10%;
+          }
+        }
+      }
+    }
     &__list {
       width: 28%;
     }
@@ -27,7 +45,72 @@
       margin: 0 0 25px;
     }
   }
+
+  .top {
+    &__box {
+      margin: 0 0 28px;
+    }
+  }
+
+  .bonus-steps {
+    justify-content: center;
+
+    &__text {
+      font-weight: 600 !important;
+      &:nth-child(1), &:nth-child(2) {
+        margin: 0 10px !important;
+      }
+      &:nth-last-child(1), &:nth-last-child(2) {
+        margin: 0 10px !important;
+      }
+    }
+    &__pic {
+      margin: 0;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .casino-compare {
+    &__list {
+      &:not(:last-child) {
+        margin: 0 0 30px;
+      }
+    }
+  }
+
+  .slot-container {
+    justify-content: center;
+  }
+
+  .slot-content {
+    width: 100%;
+    margin: 0 0 55px;
+  }
+
+  .slot-sidebar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    max-width: none;
+
+    &__box {
+      max-width: 48%;
+      margin: 0 !important;
+
+      &:not(:last-child) {
+
+      }
+    }
+  }
 }
+
 @include media-breakpoint-down(md) {
   .section {
     margin: 0 0 55px;
@@ -76,7 +159,11 @@
         }
       }
     }
-
+    &_bonus {
+      .banner__body {
+        width: 100%;
+      }
+    }
     &__body {
       order: 1 !important;;
       width: 100%;
@@ -84,6 +171,24 @@
     &__pic {
       order: 2;
       display: none;
+    }
+
+    &.best-slots-banner {
+      .banner {
+        &__pic {
+          display: block;
+
+          img {
+            top: auto;
+            right: 15px;
+            bottom: -7px;
+            left: auto;
+            width: 121px;
+            height: 117px;
+            transform: rotate3d(0, 1, 0, 180deg);
+          }
+        }
+      }
     }
   }
 
@@ -181,7 +286,74 @@
       display: none;
     }
   }
+
+  .free-slot {
+    justify-content: space-around;
+  }
+
+  .slot-providers {
+    justify-content: space-around;
+  }
+
+  .recommended {
+    justify-content: space-around;
+
+    &__box {
+      margin: 0 0 20px;
+    }
+  }
+
+  .casino-review {
+    justify-content: space-around;
+
+    &__logo, &__rating {
+      margin: 0 0 30px;
+    }
+  }
+
+  .casino {
+    justify-content: center;
+
+    &__description {
+      width: 100%;
+      max-width: none;
+
+      .table {
+        tr td {
+          display: block !important;
+
+          &:nth-child(1), &:nth-child(3) {
+            display: none !important;
+          }
+        }
+      }
+    }
+    &__sidebar {
+      &.sidebar {
+        max-width: none;
+      }
+
+      &-box {
+
+      }
+      &-list {
+
+      }
+    }
+  }
+
+  .casino-compare {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__list {
+      text-align: left;
+    }
+  }
 }
+
 @include media-breakpoint-down(sm) {
   .table {
     th, td {
@@ -200,15 +372,42 @@
     }
   }
 
-  .best-slots-banner {
-    .banner__pic img {
-      top: auto;
-      right: 15px;
-      bottom: -7px;
-      left: auto;
-      width: 121px;
-      height: 117px;
-      transform: rotate3d(0, 1, 0, 180deg);
+  .sidebar {
+    .title {
+      margin: 0 0 30px;
+      text-align: center;
+    }
+  }
+
+  .slot-review {
+    padding-bottom: 15px;
+    &__container {
+      flex-wrap: wrap;
+    }
+
+    &__game {
+      width: 100%;
+      margin: 0 0 34px;
+    }
+    .slot-game {
+      width: 100%;
+      margin: 0;
+      padding: 8px 10px 27px;
+      &__provider {
+        display: none;
+      }
+      &__buttons {
+        max-width: 162px;
+        margin: 0 5px;
+        border-radius: 30px;
+        padding: 9px 7px;
+        line-height: 20px;
+      }
+    }
+
+    &__sidebar.sidebar {
+      width: 100%;
+      max-width: none;
     }
   }
 
@@ -241,6 +440,7 @@
     display: none;
   }
 }
+
 @include media-breakpoint-down(xs) {
   .title {
     margin: 0 0 30px;
@@ -248,6 +448,12 @@
     line-height: 35px;
     text-align: center;
     text-transform: none;
+  }
+
+  .card {
+    &-link {
+      padding: 12px;
+    }
   }
 
   .accordion-list {
@@ -360,6 +566,135 @@
     justify-content: center;
   }
 
+  .free-slot {
+    &__box {
+      &.card {
+        max-width: 162px;
+        margin: 0 0 20px;
+
+        &.hidden-btn .card {
+          &-body {
+            height: 98px;
+            transform: translateY(-40%);
+          }
+          &-title {
+            font-size: 16px;
+            text-align: center;
+          }
+        }
+      }
+
+      .card-body-group {
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+      .rating-container {
+        margin: 5px 0 0 !important;
+      }
+    }
+  }
+
+  .pagination {
+    .page-item {
+      &:first-child, &:last-child {
+        .page-link {
+          font-size: 0;
+        }
+      }
+    }
+    .page-link {
+      svg {
+        display: inline-block;
+      }
+    }
+  }
+
+  .check-list {
+    li {
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .slot-providers {
+    &__box.card {
+      margin: 0 0 20px;
+    }
+  }
+
+  .top {
+    &__box {
+      margin: 0 0 28px;
+      &.first {
+        max-width: 305px;
+      }
+    }
+  }
+
+  .text-block {
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .bonus-steps {
+    justify-content: center;
+
+    &__text {
+      max-width: 150px;
+    }
+  }
+
+  .casino-review {
+    &__rating-box {
+      .rating-container {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .welcome-bonus {
+    margin: 0 auto 22px;
+  }
+
+  .send-review {
+    &__form {
+      width: 100%;
+      max-width: none;
+    }
+  }
+
+  .slot-details {
+    &__list {
+      flex-wrap: nowrap;
+      align-items: center;
+
+      li {
+        width: 100%;
+      }
+    }
+  }
+
+  .slot-img-row {
+    flex-wrap: wrap;
+    &> * {
+      margin: 0 20px 20px 0;
+    }
+  }
+
+  .slot-sidebar {
+    justify-content: center;
+
+    &__box {
+      max-width: none;
+      margin: 0 0 30px !important;
+      &:last-child {
+        margin: 0 !important;
+      }
+    }
+  }
+
   .partners {
     picture {
       width: 25%;
@@ -395,6 +730,7 @@
     }
   }
 }
+
 @media screen and (max-width: 460px) {
   .table {
     &-pic img {
@@ -402,6 +738,30 @@
       height: 52px;
     }
   }
+
+  .casino-review {
+    &__rating-box {
+      span {
+        &:first-child {
+          max-width: 135px;
+        }
+      }
+
+      .rating-container {
+        margin: 0;
+      }
+    }
+  }
+
+  .reviews {
+    &__author {
+      margin: 10px 0 0;
+    }
+    &__text {
+      font-size: 16px;
+    }
+  }
+
   .footer-content {
     &__logo {
 
@@ -434,7 +794,15 @@
     }
   }
 }
+
 @media screen and (max-width: 395px) {
+  .banner {
+    &__text {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
   .best-casino {
     &__box {
       margin-right: auto;
@@ -451,6 +819,30 @@
   .slot-theme {
     &__box {
       margin-right: 0;
+    }
+  }
+
+  .rating-box {
+    &__text {
+      margin: 0 0 0 8px;
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .casino-review {
+    &__rating-box {
+      flex-direction: column;
+
+      span:first-child {
+        max-width: none;
+      }
+    }
+
+    &__pay-method {
+      width: 200px;
+      margin-left: 10px;
     }
   }
 }

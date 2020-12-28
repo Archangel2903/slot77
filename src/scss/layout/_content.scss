@@ -451,10 +451,15 @@
       font-weight: 400 !important;
       line-height: 0;
     }
-
     &:hover {
       font-size: 25px;
       font-weight: 700;
+    }
+
+    svg {
+      display: none;
+      width: 12px;
+      height: 21px;
     }
   }
 }
@@ -1107,7 +1112,6 @@
       background: rgba(0, 0, 0, .7);
       z-index: 1;
     }
-
     img {
       position: absolute;
       top: 0;
@@ -1115,6 +1119,18 @@
       height: 100%;
       width: 100%;
       z-index: 0;
+    }
+
+    &.active {
+      &:before {
+        display: none;
+      }
+      img {
+        display: none;
+      }
+      .slot-game__start {
+        display: none;
+      }
     }
   }
   &__start {
